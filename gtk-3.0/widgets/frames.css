@@ -1,0 +1,32 @@
+/*
+ * Frames
+ */
+
+
+frame
+{
+	margin: 0 4px;
+}
+
+frame > border
+{
+	margin: 0 -4px;
+	border-image-source: url('../../gtk-assets/common/borders/frame-border.png');
+	border-image-width: 2px;
+	border-image-slice: 2;
+}
+
+frame > border.flat
+{
+	border: none;
+}
+
+
+/*
+ * Add a simpler, more generic frame around any other normal node that requests
+ * a frame
+ */
+.frame.view
+{
+	border: 1px solid @color_1;
+}

@@ -1,0 +1,32 @@
+/*
+ * Workaround to separate linked button boxes:
+ * It's a fad in GTK+ 3 and later to link related buttons together,
+ * but that fad doesn't bode well with the classic nature of this
+ * theme.
+ */
+
+.linked.horizontal > button
+{
+	margin: 0 6px 0 6px;
+}
+.linked.horizontal > button:first-child
+{
+	margin-left: 0px;
+}
+.linked.horizontal > button:last-child
+{
+	margin-right: 0px;
+}
+
+.linked.vertical > button
+{
+	margin: 6px 0 6px 0;
+}
+.linked.vertical > button:first-child
+{
+	margin-top: 0px;
+}
+.linked.vertical > button:last-child
+{
+	margin-bottom: 0px;
+}

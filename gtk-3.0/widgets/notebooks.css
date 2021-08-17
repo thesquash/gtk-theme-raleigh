@@ -1,0 +1,118 @@
+/*
+ * Notebooks
+ *
+ * This file is a mess -- GTK+ 3 just doesn't handle notebooks the same way
+ * that GTK+ 2 does.
+ *
+ * This file will probably get even messier in the future to work around
+ * GTK bugs pertaining to notebooks.
+ */
+
+
+/*
+ * Add a nice frame around the content of the notebook,
+ * but only when the notebook shows a tab bar.
+ */
+notebook > header + stack
+{
+	border-image-source: url('../../gtk-assets/common/borders/border.png');
+	border-image-width: 2px;
+	border-image-slice: 2;
+	padding: 2px;
+}
+
+
+/* Notebook tabs */
+
+notebook > header > tabs > tab
+{
+	border-image-source: url('../../gtk-assets/common/borders/border.png');
+	border-image-width: 1px 2px 2px 1px;
+	border-image-slice: 1 2 2 1;
+	background-color: @color_3;
+}
+
+notebook > header > tabs > tab:checked
+{
+	background-color: @bg_color;
+}
+
+notebook > header.top > tabs > tab,
+notebook > header.bottom > tabs > tab
+{
+	padding: 4px 6px;
+}
+
+notebook > header.left > tabs > tab,
+notebook > header.right > tabs > tab
+{
+	padding: 6px 4px;
+}
+
+notebook > header.top > tabs > tab
+{
+	border-image-width: 1px 2px 0 1px;
+	margin-top: 2px;
+}
+notebook > header.top > tabs > tab:checked
+{
+	margin: 0 -2px -1px -2px;
+}
+notebook > header.top > tabs > tab:checked:first-child,
+notebook > header.top > tabs > arrow + tab:checked,
+notebook > header.bottom > tabs > tab:checked:first-child,
+notebook > header.bottom > tabs > arrow + tab:checked
+{
+	margin-left: 0px;
+}
+notebook > header.top > tabs > tab:checked:last-child,
+notebook > header.top > tabs > arrow + tab:checked:last-child,
+notebook > header.bottom > tabs > tab:checked:last-child,
+notebook > header.bottom > tabs > arrow + tab:checked:last-child
+{
+	margin-right: 0px;
+}
+
+notebook > header.right > tabs > tab
+{
+	border-image-width: 1px 2px 2px 0;
+	margin-right: 2px;
+}
+notebook > header.right > tabs > tab:checked
+{
+	margin: -2px 0 -1px -2px;
+}
+notebook > header.left > tabs > tab:checked:first-child,
+notebook > header.left > tabs > arrow + tab:checked,
+notebook > header.right > tabs > tab:checked:first-child,
+notebook > header.right > tabs > arrow + tab:checked
+{
+	margin-top: 0px;
+}
+notebook > header.left > tabs > tab:checked:last-child,
+notebook > header.left > tabs > arrow + tab:checked:last-child,
+notebook > header.right > tabs > tab:checked:last-child,
+notebook > header.right > tabs > arrow + tab:checked:last-child
+{
+	margin-bottom: 0px;
+}
+
+notebook > header.bottom > tabs > tab
+{
+	border-image-width: 0 2px 2px 1px;
+	margin-bottom: 2px;
+}
+notebook > header.bottom > tabs > tab:checked
+{
+	margin: -2px -1px 0 -2px;
+}
+
+notebook > header.left > tabs > tab
+{
+	border-image-width: 1px 0 2px 1px;
+	margin-left: 2px;
+}
+notebook > header.left > tabs > tab:checked
+{
+	margin: -2px -1px -1px 0;
+}

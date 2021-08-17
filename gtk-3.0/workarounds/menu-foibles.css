@@ -1,0 +1,21 @@
+/*
+ * XXX:
+ *
+ * For some whack-a-doodle reason, when you add padding to a menu which is
+ * too large to fit entirely on-screen, the top "panning arrow button" looks
+ * just fine, but the bottom one has some unknown type of spacing applied
+ * to it.  It's not padding, it's not a margin, and it doesn't seem to be
+ * border-related; I get the impression it's yet another GTK bug.  Specifically,
+ * the mysterious spacing in question is a block of transparent space at the
+ * bottom of the pan down button (or, you could say negative space at the top
+ * of the button), and its height is always equal to double the menu's bottom
+ * padding.  Weird.
+ *
+ * Yes, this is an ugly hack to get rid of the spacing, but I don't know any
+ * other way to remove the spacing.
+ */
+
+menu > arrow.bottom
+{
+	margin: 6px 0 -6px 0;
+}

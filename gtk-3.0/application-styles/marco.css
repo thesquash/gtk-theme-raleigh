@@ -1,0 +1,19 @@
+/* Marco, the MATE window manager */
+
+/*
+ * An ugly workaround to let Marco know what color we want it to use for the
+ * titlebar of windows.  We set a background color for selected items, but
+ * Marco pays attention to the background color of a selected *window*.
+ * We always set the background color of windows to gray, since there's no
+ * such thing as a selected window, but we create a selector for a phony
+ * kind of window here, just to make Marco happy.
+ *
+ * Who knows?  Maybe other window managers do something this brain dead,
+ * and if so:  (1) why? and (2) maybe we'll move this declaration somewhere
+ * else in the future.
+ */
+window.background:selected
+{
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
+}

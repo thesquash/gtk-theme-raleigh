@@ -19,5 +19,12 @@
 
 @define-color hover_bg_color #eeeeee;
 
-@import url('widgets.css');
-@import url('applications.css');
+@define-color error_destructive_bg_color #f03838;
+@define-color info_bg_color #ffffbf;
+@define-color question_suggested_bg_color #8cb0d7;
+@define-color warning_bg_color #fcaf3e;
+
+@define-color destructive_hover_bg_color shade(@error_destructive_bg_color, 1.1);
+@define-color suggested_hover_bg_color shade(@question_suggested_bg_color, 1.1);
+
+@import url('main.css');

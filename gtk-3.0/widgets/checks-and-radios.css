@@ -1,0 +1,100 @@
+/*
+ * Check and radio buttons (but not check or radio menu items)
+ */
+
+
+checkbutton,
+radiobutton
+{
+	padding: 2px;
+}
+
+checkbutton:hover,
+radiobutton:hover
+{
+	background-color: @hover_bg_color;
+}
+
+
+/*
+ * The rest of this code is a little dissimilar to the above, since this code
+ * draws checks and radios for treeview cells too.
+ */
+
+:not(menuitem) > check,
+:not(menuitem) > radio
+{
+	-gtk-icon-source: none;
+	background-repeat: no-repeat;
+	min-width: 13px;
+	min-height: 13px;
+	margin-right: 6px;
+}
+
+:not(menuitem) > check:dir(rtl),
+:not(menuitem) > radio:dir(rtl)
+{
+	margin-left: 6px;
+	margin-right: 0;
+}
+
+:not(menuitem) > check
+{
+	background-image: url('../../gtk-assets/common/checks/checkbox-unchecked-enabled.png');
+}
+
+:not(menuitem) > check:active
+{
+	background-image: url('../../gtk-assets/common/checks/checkbox-unchecked-active.png');
+}
+
+:not(menuitem) > check:checked
+{
+	background-image: url('../../gtk-assets/common/checks/checkbox-checked-enabled.png');
+}
+
+:not(menuitem) > check:checked:active
+{
+	background-image: url('../../gtk-assets/common/checks/checkbox-checked-active.png');
+}
+
+:not(menuitem) > check:disabled
+{
+	background-image: url('../../gtk-assets/common/checks/checkbox-unchecked-disabled.png');
+}
+
+:not(menuitem) > check:checked:disabled
+{
+	background-image: url('../../gtk-assets/common/checks/checkbox-checked-disabled.png');
+}
+
+
+:not(menuitem) > radio
+{
+	background-image: url('../../gtk-assets/common/checks/radio-unchecked-enabled.png');
+}
+
+:not(menuitem) > radio:active
+{
+	background-image: url('../../gtk-assets/common/checks/radio-unchecked-active.png');
+}
+
+:not(menuitem) > radio:checked
+{
+	background-image: url('../../gtk-assets/common/checks/radio-checked-enabled.png');
+}
+
+:not(menuitem) > radio:checked:active
+{
+	background-image: url('../../gtk-assets/common/checks/radio-checked-active.png');
+}
+
+:not(menuitem) > radio:disabled
+{
+	background-image: url('../../gtk-assets/common/checks/radio-unchecked-disabled.png');
+}
+
+:not(menuitem) > radio:checked:disabled
+{
+	background-image: url('../../gtk-assets/common/checks/radio-checked-disabled.png');
+}

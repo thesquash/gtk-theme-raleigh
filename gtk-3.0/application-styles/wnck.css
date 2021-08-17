@@ -1,0 +1,43 @@
+/*
+ * WNCK widgets:  Used for window lists, desktop selectors, etc.
+ *
+ * This is in its own file since several desktops use these widgets,
+ * not just one.  At the moment, the list includes LXDE, MATE, and XFCE,
+ * among others.
+ */
+
+
+/* The WNCK window list */
+
+/* We don't want flat buttons in the WNCK window list. */
+wnck-tasklist > button.flat
+{
+	border-image-source: url('../../gtk-assets/common/borders/border.png');
+	border-image-width: 1px 2px 2px 1px;
+	border-image-slice: 1 2 2 1;
+}
+
+wnck-tasklist > button.flat:active,
+wnck-tasklist > button.flat:checked
+{
+	border-image-source: url('../../gtk-assets/common/borders/border-sunken.png');
+	border-image-width: 2px 1px 1px 2px;
+	border-image-slice: 2 1 1 2;
+}
+
+
+/* The WNCK desktop selector / pager */
+
+/*
+ * Ugh, it looks like the WNCK pager is like the treeview and calendar widgets
+ * in the sense that it doesn't have specially named subnodes.  For the time
+ * being I have no idea how to style the pager correctly, so keep this
+ * commented out.
+ */
+/*wnck-pager
+{
+	border-image-source: url('../../gtk-assets/common/entry-border.png');
+	border-image-width: 2px;
+	border-image-slice: 2;
+	padding: 2px;
+}*/

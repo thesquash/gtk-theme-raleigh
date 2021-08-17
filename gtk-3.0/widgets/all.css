@@ -1,0 +1,28 @@
+/*
+ * Import all widget styling information.
+ *
+ * If possible, please keep this file in alphabetical order, except for
+ * the 'miscellaneous' line at the bottom.
+ */
+
+@import url('assistants.css');
+@import url('buttons.css');
+@import url('checks-and-radios.css');
+@import url('color-choosers.css');
+@import url('expanders.css');
+@import url('frames.css');
+@import url('info-bars.css');
+@import url('lists-and-views.css');
+@import url('notebooks.css');
+@import url('menus-and-popups.css');
+@import url('progress-bars.css');
+@import url('ranges.css');
+@import url('separators.css');
+@import url('spinners.css');
+@import url('window-decorations.css');
+
+/*
+ * This should always be the last line of this file, no matter where it
+ * would sit in alphabetical order.
+ */
+@import url('miscellaneous.css');

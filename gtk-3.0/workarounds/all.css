@@ -1,0 +1,9 @@
+/*
+ * Import this file to import all workarounds into your theme.
+ *
+ * Each time you add a file of workarounds to this directory, add the file
+ * to this list.
+ */
+
+@import url('linked-buttons.css');
+@import url('menu-foibles.css');

@@ -1,0 +1,89 @@
+/*
+ * Color choosers, and widgets related to choosing colors
+ *
+ * This is a bit of a broad category, but fortunately almost everything
+ * here is used primarily by the color chooser widget; few of these widgets
+ * are ever used stand-alone.
+ */
+
+
+/*
+ * Special rules for color scales: see `ranges.css` for the code behind
+ * more generic scales.
+ */
+
+scale.horizontal.color > contents > trough > slider
+{
+	margin-top: 7px;
+}
+
+scale.vertical.color > contents > trough > slider
+{
+	margin-right: 7px;
+}
+
+
+/* Color swatches (often used in color buttons as well as the color chooser) */
+
+/* Give color swatches a sunken border, just like they had in GTK+ 2. */
+colorswatch
+{
+	border-image-source: url('../../gtk-assets/common/borders/border-sunken.png');
+	border-image-width: 2px 1px 1px 2px;
+	border-image-slice: 2 1 1 2;
+	padding: 2px 1px 1px 2px;
+}
+
+
+/* Color swatch style rules used only for the color chooser */
+
+/*
+ * The "Add Custom Color" button is not really a button, but let's make it
+ * look like it is.  (After all, what else are you going to make it look like?)
+ */
+colorswatch#add-color-button
+{
+	border-image-source: url('../../gtk-assets/common/borders/border.png');
+	border-image-width: 1px 2px 2px 1px;
+	border-image-slice: 1 2 2 1;
+}
+
+colorswatch#add-color-button:hover
+{
+	background-color: @hover_bg_color;
+}
+
+/*
+ * It's crazy annoying to choose a select color, only to have the color itself
+ * blotted out by the background color for selected widgets.  Display just a
+ * small checkmark to show that a color swatch is selected, rather than
+ * covering up the whole color swatch and confusing the user about what color
+ * they just selected.
+ */
+colorswatch:selected,
+colorswatch:selected > overlay
+{
+	background-color: transparent;
+}
+
+colorswatch.dark:selected > overlay
+{
+	color: @selected_fg_color;
+}
+
+colorswatch.light:selected > overlay
+{
+	color: @fg_color;
+}
+
+
+/* The color chooser widget itself */
+
+colorchooser box.popover
+{
+	background-color: @bg_color;
+	border-image-source: url('../../gtk-assets/common/borders/menu-border.png');
+	border-image-width: 2px;
+	border-image-slice: 2;
+	margin: 3px 0px 3px 0px;
+}

@@ -1,0 +1,199 @@
+/*
+ * Ranges (scrollbars and sliders)
+ */
+
+
+/*
+ * Under any normal circumstances, we'd add the border to the trough, not
+ * the entire scrollbar/scale node.  But we actually *want* a border around
+ * the entire scrolbar/scale -- that's how it was done in GTK+ 2!
+ */
+scrollbar > contents,
+scale > contents
+{
+	border-color: @color_1 @color_2 @color_2 @color_1;
+	border-style: solid;
+	border-width: 1px;
+}
+
+scrollbar > contents > trough,
+scale > contents > trough
+{
+	background-color: @color_3;
+}
+
+scrollbar > contents > trough > slider,
+scale > contents > trough > slider
+{
+	background-color: @bg_color;
+	border-image-source: url('../../gtk-assets/common/borders/border.png');
+	border-image-width: 1px 2px 2px 1px;
+	border-image-slice: 1 2 2 1;
+}
+
+scrollbar.horizontal > contents > trough > slider,
+scale.horizontal > contents > trough > slider
+{
+	min-width: 30px;
+	min-height: 14px;
+}
+
+scrollbar.vertical > contents > trough > slider,
+scale.vertical > contents > trough > slider
+{
+	min-width: 14px;
+	min-height: 30px;
+}
+
+scrollbar > contents > trough > slider:hover,
+scrollbar > contents > trough > slider:active,
+scale > contents > trough > slider:hover,
+scale > contents > trough > slider:active
+{
+	background-color: @hover_bg_color;
+}
+
+
+/* Scale widget-specific styling */
+
+scale.horizontal > contents > trough
+{
+	padding: 0 15px 0 15px;
+}
+
+scale.vertical > contents > trough
+{
+	padding: 15px 0 15px 0;
+}
+
+/*
+ * Add the tick mark to the scale slider, as an indicator of the scale's
+ * current value.
+ */
+scale > contents > trough > slider
+{
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+scale.horizontal > contents > trough > slider
+{
+	background-image: url('../../gtk-assets/common/miscellaneous/scale-tick-horizontal.png');
+}
+
+scale.vertical > contents > trough > slider
+{
+	background-image: url('../../gtk-assets/common/miscellaneous/scale-tick-vertical.png');
+}
+
+/*
+ * It would be nice to style the slider gradation marks to look like the scale
+ * slider tick mark; alas, GTK+ 3 doesn't seem to have such a capability.  So
+ * for the time being, we just make the marks plain ol' black.
+ */
+scale.horizontal > marks > mark > indicator
+{
+	min-width: 1px;
+	min-height: 10px;
+}
+
+scale.vertical > marks > mark > indicator
+{
+	min-width: 10px;
+	min-height: 1px;
+}
+
+
+/* Scrollbar-specific styling */
+
+/*
+ * - The width and height are set here because otherwise the scrollbar
+ *   buttons would look miniscule!  (Actually, they'd be nonexistent.)
+ *
+ * - The padding is explicitly set to zero since generic button widgets have
+ *   a fairly enormous default padding, which if applied here would necessarily
+ *   make the scrollbar buttons bigger than the trough.  That would be bad.
+ *
+ * - The background and icon style properties are set up in preparation for
+ *   below, where we apply custom arrow images to each scrollbar button.
+ */
+scrollbar > contents > button
+{
+	-gtk-icon-source: none;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 14px;
+	min-width: 14px;
+	padding: 0;
+}
+
+scrollbar.horizontal > contents > button.up
+{
+	background-image: url('../../gtk-assets/light/arrows/arrow-left.png');
+}
+
+scrollbar.horizontal > contents > button.down
+{
+	background-image: url('../../gtk-assets/light/arrows/arrow-right.png');
+}
+
+scrollbar.horizontal > contents > button.up:disabled
+{
+	background-image: url('../../gtk-assets/light/arrows/arrow-left-disabled.png');
+}
+
+scrollbar.horizontal > contents > button.down:disabled
+{
+	background-image: url('../../gtk-assets/light/arrows/arrow-right-disabled.png');
+}
+
+/*
+ * For our right-to-left users.
+ *
+ * Admittedly, we wouldn't need this duplicative code if we used stock symbolic
+ * icons, but our custom icons look way better (or at least older-fashioned)
+ * than the GTK symbolic icons that we could use.  Well, at least IMHO.
+ */
+scrollbar.horizontal > contents > button.up:dir(rtl)
+{
+	background-image: url('../../gtk-assets/light/arrows/arrow-right.png');
+}
+
+scrollbar.horizontal > contents > button.down:dir(rtl)
+{
+	background-image: url('../../gtk-assets/light/arrows/arrow-left.png');
+}
+
+scrollbar.horizontal > contents > button.up:disabled:dir(rtl)
+{
+	background-image: url('../../gtk-assets/light/arrows/arrow-right-disabled.png');
+}
+
+scrollbar.horizontal > contents > button.down:disabled:dir(rtl)
+{
+	background-image: url('../../gtk-assets/light/arrows/arrow-left-disabled.png');
+}
+
+/*
+ * Fortunately, however, vertical scrollbar buttons don't need
+ * right-to-left-specific style rules.  So we can relax in this section...
+ */
+scrollbar.vertical > contents > button.up
+{
+	background-image: url('../../gtk-assets/light/arrows/arrow-up.png');
+}
+
+scrollbar.vertical > contents > button.down
+{
+	background-image: url('../../gtk-assets/light/arrows/arrow-down.png');
+}
+
+scrollbar.vertical > contents > button.up:disabled
+{
+	background-image: url('../../gtk-assets/light/arrows/arrow-up-disabled.png');
+}
+
+scrollbar.vertical > contents > button.down:disabled
+{
+	background-image: url('../../gtk-assets/light/arrows/arrow-down-disabled.png');
+}

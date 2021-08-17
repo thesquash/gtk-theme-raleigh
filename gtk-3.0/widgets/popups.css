@@ -1,0 +1,155 @@
+/*
+ * Popups (including popovers and menus); menu items
+ *
+ * GTK+ 2 didn't have popovers (thank goodness); the goal here is to make
+ * popovers look as similar to menus as possible.
+ */
+
+/* Menus and popovers */
+
+menu,
+popover,
+.app-notification
+{
+	background-color: @bg_color;
+	border-image-source: url('../../gtk-assets/common/borders/menu-border.png');
+	border-image-width: 2px;
+	border-image-slice: 2;
+	padding: 3px 2px 3px 2px;
+}
+
+/*
+ * Scroll arrow buttons on menus
+ *
+ * These are supposed to look similar to plain menu items, except that scroll
+ * arrow buttons are supposed to have borders and backgrounds like normal
+ * buttons do.
+ */
+
+menu > arrow
+{
+	min-height: 16px;
+	border-image-source: url('../../gtk-assets/common/borders/border.png');
+	border-image-width: 1px 2px 2px 1px;
+	border-image-slice: 1 2 2 1;
+}
+
+menu > arrow:hover
+{
+	background-color: @hover_bg_color;
+}
+
+menu > arrow:disabled
+{
+	border-image-width: 0px;
+	background-color: transparent;
+}
+
+menu > arrow.top
+{
+	-gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
+}
+
+menu > arrow.bottom
+{
+	-gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+}
+
+
+/* Menu items, components of menu items, and popover model buttons */
+
+menuitem,
+menu > arrow,
+popover.menu modelbutton
+{
+	padding: 4px;
+}
+
+menuitem:hover,
+popover.menu modelbutton:hover
+{
+	background-color: @selected_bg_color;
+}
+
+menuitem:hover > label,
+menuitem:hover > label > accelerator,
+menuitem:hover > box > label,
+menuitem:hover > arrow,
+menuitem:hover > cellview *,
+popover.menu modelbutton:hover *
+{
+	color: @selected_fg_color;
+}
+
+menuitem > arrow
+{
+	min-width: 16px;
+	min-height: 16px;
+}
+
+menuitem > arrow.right
+{
+	margin: 0px -4px 0px 4px;
+	-gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+}
+
+menuitem > arrow.left
+{
+	margin: 0px 4px 0px -4px;
+	-gtk-icon-source: -gtk-icontheme('pan-start-symbolic');
+}
+
+menuitem > check
+{
+	background: none;
+	min-width: 8px;
+	min-height: 7px;
+	margin: 0px 6px 0px 2px;
+}
+menuitem > check:checked
+{
+	-gtk-icon-source: url('../../gtk-assets/light/checks/menu-item-check.png');
+}
+menuitem > check:checked:disabled
+{
+	-gtk-icon-source: url('../../gtk-assets/light/checks/menu-item-check-disabled.png');
+}
+menuitem:hover > check:checked
+{
+	-gtk-icon-source: url('../../gtk-assets/light/checks/menu-item-check-hover.png');
+}
+
+menuitem > radio
+{
+	background: none;
+	min-width: 5px;
+	min-height: 5px;
+	margin: 0px 8px 0px 3px;
+}
+menuitem > radio:checked
+{
+	-gtk-icon-source: url('../../gtk-assets/light/checks/menu-item-radio.png');
+}
+menuitem > radio:checked:disabled
+{
+	-gtk-icon-source: url('../../gtk-assets/light/checks/menu-item-radio-disabled.png');
+}
+menuitem:hover > radio:checked
+{
+	-gtk-icon-source: url('../../gtk-assets/light/checks/menu-item-radio-hover.png');
+}
+
+
+/* Menu bars */
+
+menubar
+{
+	border-image-source: url('../../gtk-assets/common/borders/border.png');
+	border-image-width: 1px 2px 2px 1px;
+	border-image-slice: 1 2 2 1;
+	padding: 2px 3px 2px 3px;
+}
+menubar > menuitem
+{
+	padding: 4px 6px 4px 6px;
+}

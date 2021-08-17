@@ -1,0 +1,20 @@
+/*
+ * Import all application-specific styles.
+ *
+ * Please import CSS files in groups of the desktop environment the CSS rules
+ * apply to; sort the groups in alphabetical order of the name of the desktop
+ * environment, and sort the files in each group in alphabetical order.
+ */
+
+/* MATE */
+@import url('marco.css');
+@import url('mate-panel.css');
+
+
+/*
+ * WNCK widgets.
+ *
+ * No, it's not a desktop environment in and of itself, but these widgets
+ * sure get used by a lot of different desktops!
+ */
+@import url('wnck.css');

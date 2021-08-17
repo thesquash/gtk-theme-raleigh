@@ -1,0 +1,52 @@
+/* Window decorations and titlebars */
+
+/*
+ * For windows that have no server-side or window manager decorations, use
+ * the decorative border for menus.
+ */
+decoration
+{
+	border-image-source: url('../../gtk-assets/common/borders/menu-border.png');
+	border-image-width: 2px;
+	border-image-slice: 2;
+	padding: 2px;
+}
+
+
+/*
+ * Title bars and window titles.
+ */
+
+.titlebar
+{
+	background-color: @selected_bg_color;
+	border-image-source: url('../../gtk-assets/common/borders/progress-border.png');
+	border-image-width: 1px 2px 2px 1px;
+	border-image-slice: 1 2 2 1;
+	margin: -2px -2px 0 -2px;
+	padding: 6px;
+}
+
+.titlebar .title,
+.titlebar .subtitle
+{
+	color: @selected_fg_color;
+}
+.titlebar .title
+{
+	font-weight: bold;
+}
+.titlebar .subtitle
+{
+	font-size: smaller;
+}
+
+/*
+ * As much as you may dislike symbolic icons, non-symbolic icons usually look
+ * awful as title button icons (minimize, close, ...), so add a special
+ * exception for title buttons.
+ */
+.titlebar .titlebutton > image
+{
+	-gtk-icon-style: symbolic;
+}

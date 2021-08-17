@@ -1,0 +1,114 @@
+/* Views:  Text views, tree views, GtkEntry, list boxes, calendars */
+
+
+/*
+ * The most basic and generic styling: give every view widget an appropriate
+ * background color -- often white for light themes and black or dark gray
+ * for dark themes.
+ */
+calendar.view,
+treeview,
+iconview,
+list,
+textview,
+entry
+{
+	background-color: @color_2;
+}
+
+calendar.view:disabled,
+treeview:disabled,
+iconview:disabled,
+list:disabled,
+textview:disabled,
+entry:disabled
+{
+	background-color: @hover_bg_color;
+}
+
+entry,
+textview,
+:not(stack) > list
+{
+	border-image-source: url('../../gtk-assets/common/borders/entry-border.png');
+	border-image-width: 2px;
+	border-image-slice: 2;
+}
+
+/* Treeviews */
+
+treeview header button,
+treeview header button:hover
+{
+	padding: 6px;
+	padding-top: 5px;
+}
+
+
+/*
+ * List widgets.
+ *
+ * While GTK+ 1 had dedicated list widgets as opposed to tree widgets,
+ * the simple list widget was deprecated in GTK+ 2, after the treeview
+ * was introduced.  The objective here therefore is to try to mimic the
+ * appearance of the treeview wherever possible, except for treeview
+ * bugs, of course.
+ */
+
+list
+{
+	padding: 2px 4px;
+}
+
+list > row
+{
+	padding: 2px;
+}
+
+
+/* Entry widgets */
+
+entry
+{
+	padding: 4px;
+}
+
+
+/* Calendars */
+
+calendar
+{
+	border-image-source: url('../../gtk-assets/common/borders/border-sunken.png');
+	border-image-width: 2px 1px 1px 2px;
+	border-image-slice: 2 1 1 2;
+}
+
+calendar:indeterminate
+{
+	color: @insensitive_fg_color;
+}
+
+calendar.highlight
+{
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
+}
+
+calendar.header
+{
+	background-color: @bg_color;
+	border-image-source: url('../../gtk-assets/common/borders/border.png');
+	border-image-width: 1px 2px 2px 1px;
+	border-image-slice: 1 2 2 1;
+}
+
+/* Calendar buttons for navigating to previous / subsequent months and years */
+calendar.button
+{
+	background-color: @bg_color;
+}
+
+calendar.button:hover
+{
+	background-color: @hover_bg_color;
+}

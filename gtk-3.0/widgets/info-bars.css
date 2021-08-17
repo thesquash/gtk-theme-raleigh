@@ -1,0 +1,37 @@
+/*
+ * Info bars
+ */
+
+
+infobar.error,
+infobar.info,
+infobar.question,
+infobar.warning
+{
+	border-image-width: 1px 2px 2px 1px;
+	border-image-slice: 1 2 2 1;
+}
+
+infobar.error
+{
+	background-color: @error_destructive_bg_color;
+	border-image-source: url('../../gtk-assets/common/borders/error-destructive-border.png');
+}
+
+infobar.info
+{
+	background-color: @info_bg_color;
+	border-image-source: url('../../gtk-assets/common/borders/info-border.png');
+}
+
+infobar.question
+{
+	background-color: @question_suggested_bg_color;
+	border-image-source: url('../../gtk-assets/common/borders/question-suggested-border.png');
+}
+
+infobar.warning
+{
+	background-color: @warning_bg_color;
+	border-image-source: url('../../gtk-assets/common/borders/warning-border.png');
+}

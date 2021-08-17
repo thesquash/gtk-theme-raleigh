@@ -1,0 +1,42 @@
+/*
+ * Assistants:  The the easy-to-use setup dialogs often known as "wizards".
+ */
+
+assistant > *
+{
+	padding: 6px;
+}
+
+
+/*
+ * GTK+ 2 assistants didn't really have a sidebar, but we'll make the
+ * GTK+ 3 sidebar look elegant anyway, since it's kind of a nice feature
+ * of GTK+ 3 (one of the few good things about it, IMO, as a matter of fact!).
+ *
+ * This is also supposed to look like the list view widget; some code has been
+ * mercilessly stolen from there.
+ */
+assistant .sidebar
+{
+	background-color: @color_2;
+	border: 1px solid @color_1;
+	margin-right: 6px; /*Give the sidebar some space from the main wizard*/
+	padding: 2px 4px;
+}
+
+/* As always, for our right-to-left users */
+assistant .sidebar:dir(rtl)
+{
+	margin-left: 6px;
+}
+
+assistant .sidebar > label
+{
+	padding: 2px;
+}
+
+assistant .sidebar > label.highlight
+{
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
+}

@@ -1,0 +1,26 @@
+/*
+ * Spinners
+ * TODO:  It's hard to make authentic-looking spinners;
+ * for the time being, keep this code commented out.
+ */
+
+/*@keyframes spin {
+	to { -gtk-icon-transform: rotate(1turn); }
+}
+
+spinner
+{
+	-gtk-icon-source: -gtk-icontheme("process-working-symbolic");
+	opacity: 0;
+}
+
+spinner:checked
+{
+	animation: spin 1s steps(12) infinite;
+	opacity: 1;
+}
+
+spinner:disabled
+{
+	opacity: .5;
+}*/
