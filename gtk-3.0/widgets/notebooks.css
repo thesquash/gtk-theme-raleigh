@@ -13,7 +13,7 @@
  * Add a nice frame around the content of the notebook,
  * but only when the notebook shows a tab bar.
  */
-notebook > header + stack
+notebook > stack:not(:only-child)
 {
 	border-image-width: 2px;
 	border-image-slice: 2;

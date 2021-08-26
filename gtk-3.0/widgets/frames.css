@@ -11,13 +11,17 @@ frame
 frame > border
 {
 	margin: 0 -4px;
+	padding: 2px;
 	border-image-width: 2px;
 	border-image-slice: 2;
 }
 
-frame > border.flat
+frame > border.flat,
+statusbar > frame > border,
+statusbar > widget > frame > border
 {
 	border: none;
+	padding: 0;
 }
 
 

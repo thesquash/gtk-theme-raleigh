@@ -12,7 +12,7 @@
 }
 
 /* Workaround to avoid double decorations around menus and tooltips */
-* > * > decoration,
+.popup > decoration,
 tooltip > decoration
 {
 	border: none;

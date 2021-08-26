@@ -23,7 +23,7 @@ menubar,
 toolbar,
 .emoji-picker stack scrolledwindow + box,
 /* From widgets/notebooks.css */
-notebook > header + stack,
+notebook > stack:not(:only-child),
 notebook > header > tabs > tab,
 /* From widgets/ranges.css */
 scrollbar > contents > trough > slider,

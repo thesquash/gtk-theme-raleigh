@@ -35,7 +35,7 @@ statusbar button:not(:active):not(:checked)
 tooltip.background
 {
 	background-color: @tooltip_bg_color;
-	border: 1px solid @tooltip_fg_color;
+	border: 1px solid @darkest_base_color;
 }
 
 

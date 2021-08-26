@@ -18,6 +18,17 @@ popover,
 }
 
 /*
+ * GNOME app notification pop-ups tend to be frames; since we've already
+ * applied a border around the frame, remove the normal frame border.
+ */
+frame.app-notification > border
+{
+	border: none;
+	padding: 5px;
+}
+
+
+/*
  * Scroll arrow buttons on menus
  *
  * These are supposed to look similar to plain menu items, except that scroll

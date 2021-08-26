@@ -16,7 +16,7 @@
 @define-color visited_link_color #cc929c;
 
 @define-color color_1 #999999;
-@define-color color_2 #000000;
+@define-color color_2 @light_base_color;
 @define-color color_3 #333333;
 
 @define-color insensitive_fg_color #999999;
