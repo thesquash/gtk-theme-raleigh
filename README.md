@@ -1,4 +1,7 @@
-<img alt="MATE 1.24.1 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Gtk-Theme-Raleigh.png"/>
+<img alt="Cinnamon 5.0.5 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-Cinnamon.png"/>
+<img alt="GNOME 40 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-GNOME-40.png"/>
+<img alt="MATE 1.24.1 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-MATE.png"/>
+<img alt="XFCE 4.17.0 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-XFCE.png"/>
 
 # Gtk-Theme-Raleigh
 
@@ -30,16 +33,21 @@ applications to look perfect as of yet!
 ## What's New?
 
 Gtk-Theme-Raleigh now has few known bugs, and displays all of the `gtk3-demo`
-applications acceptably well, as well as looking pretty on the MATE and LXDE
-desktops.  (Note:  The latter is kind of pointless since few distributors
-compile LXDE with GTK+ 3; they usually use GTK+ 2.)
+applications *very* well.  It is also a truly cross-desktop theme now, as it
+displays properly on the Cinnamon, MATE, and XFCE desktops.
+***It even looks good on GNOME 40!***
 
-The theme code has been modularized (except for some currently-unused assets
-of the dark variant), and the code should be more readable now thanks to
-dozens of new comments in the CSS.
+The theme code has been modularized, and the code should be more readable
+now thanks to dozens of new comments in the CSS.
 
-I am currently also testing the theme on Cinnamon, GNOME 40 and XFCE, so that
-this theme can become a truly cross-desktop theme.
+The dark variant is complete.
+
+Right-to-left users should now be pleased by the fact that this theme is
+now fully right-to-left compliant, as far as I am aware.
+
+A GTK 4 port is being considered, though is unlikely since GTK 4 neutralizes
+some of the theme's classic looks -- GTK 4 eliminated some widgets and
+components of widgets which are necessary for the full Raleigh look-and-feel.
 
 ## Installation
 

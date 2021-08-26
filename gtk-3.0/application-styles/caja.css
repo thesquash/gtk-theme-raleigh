@@ -1,0 +1,15 @@
+.view > widget.view
+{
+	background-color: @color_2;
+}
+
+.view > widget.view:selected
+{
+	background-color: @selected_bg_color;
+}
+
+.view > widget.view:selected,
+.view > widget.view:selected *
+{
+	color: @selected_fg_color;
+}

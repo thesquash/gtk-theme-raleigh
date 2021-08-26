@@ -19,7 +19,6 @@
 statusbar > *,
 statusbar button:not(:active):not(:checked)
 {
-	border-image-source: url('../../gtk-assets/common/borders/border-sunken.png');
 	border-image-width: 2px 1px 1px 2px;
 	border-image-slice: 2 1 1 2;
 	padding: 4px;
@@ -48,7 +47,6 @@ tooltip.background
 
 toolbar
 {
-	border-image-source: url('../../gtk-assets/common/borders/border.png');
 	border-image-width: 1px 2px 2px 1px;
 	border-image-slice: 1 2 2 1;
 	padding: 3px;
@@ -97,13 +95,15 @@ combobox button.combo arrow
  */
 combobox button.combo cellview + arrow
 {
-	border-image: url('../../gtk-assets/common/separators/combobox-separator.png') 0 0 0 2 / 0 0 0 2px;
+	border-image-slice:  0 0 0 2;
+	border-image-width:  0 0 0 2px;
 	padding-left: 2px;
 }
 
 combobox button.combo arrow:first-child:dir(rtl)
 {
-	border-image: url('../../gtk-assets/common/separators/combobox-separator.png') 0 2 0 0 / 0 2px 0 0;
+	border-image-slice:  0 2 0 0;
+	border-image-width:  0 2px 0 0;
 	padding-right: 2px;
 }
 
@@ -126,7 +126,6 @@ combobox button.combo arrow:first-child:dir(rtl)
 
 .emoji-picker stack scrolledwindow + box
 {
-	border-image-source: url('../../gtk-assets/common/borders/border.png');
 	border-image-width: 1px 2px 2px 1px;
 	border-image-slice: 1 2 2 1;
 	padding: 3px;

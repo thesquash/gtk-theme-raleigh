@@ -30,7 +30,6 @@ entry,
 textview,
 :not(stack) > list
 {
-	border-image-source: url('../../gtk-assets/common/borders/entry-border.png');
 	border-image-width: 2px;
 	border-image-slice: 2;
 }
@@ -78,7 +77,6 @@ entry
 
 calendar
 {
-	border-image-source: url('../../gtk-assets/common/borders/border-sunken.png');
 	border-image-width: 2px 1px 1px 2px;
 	border-image-slice: 2 1 1 2;
 }
@@ -97,7 +95,6 @@ calendar.highlight
 calendar.header
 {
 	background-color: @bg_color;
-	border-image-source: url('../../gtk-assets/common/borders/border.png');
 	border-image-width: 1px 2px 2px 1px;
 	border-image-slice: 1 2 2 1;
 }

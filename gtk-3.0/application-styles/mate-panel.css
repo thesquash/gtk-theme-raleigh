@@ -14,13 +14,12 @@ PanelWidget menubar
  * Give some panel widgets (like the window list and the notification area)
  * a draggable grip.
  */
-MatePanelAppletFrameDBus > MatePanelAppletFrameDBus {
-	border-image-source: url('../../gtk-assets/common/borders/border.png');
+MatePanelAppletFrameDBus > MatePanelAppletFrameDBus
+{
 	border-image-width: 1px 0 2px 0;
 	border-image-slice: 1 2 2 1;
 	background-repeat: repeat-y;
 	background-position: top left;
-	background-image: url("../../gtk-assets/common/miscellaneous/panel-item-grip.png");
 	background-size: 10px 3px;
 }
 
@@ -28,7 +27,6 @@ MatePanelAppletFrameDBus > MatePanelAppletFrameDBus {
 /* Add a nice menu-like border around the Calendar popup, etc. */
 #MatePanelPopupWindow
 {
-	border-image-source: url('../../gtk-assets/common/borders/menu-border.png');
 	border-image-width: 2px;
 	border-image-slice: 2;
 	padding: 2px;

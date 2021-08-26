@@ -8,39 +8,6 @@ expander title:hover
 expander > title > arrow
 {
 	margin-right: 4px;
-	background-image: url('../../gtk-assets/light/arrows/arrow-right.png');
 	min-width: 10px;
 	min-height: 10px;
 }
-
-expander > title > arrow:disabled
-{
-	background-image: url('../../gtk-assets/light/arrows/arrow-right-disabled.png');
-}
-
-expander > title > arrow:checked
-{
-	background-image: url('../../gtk-assets/light/arrows/arrow-down.png');
-}
-
-expander > title > arrow:disabled:checked
-{
-	background-image: url('../../gtk-assets/light/arrows/arrow-down-disabled.png');
-}
-
-
-/* For our fine right-to-left users */
-expander > title > arrow:dir(rtl)
-{
-	background-image: url('../../gtk-assets/light/arrows/arrow-left.png');
-}
-
-expander > title > arrow:disabled:dir(rtl)
-{
-	background-image: url('../../gtk-assets/light/arrows/arrow-left-disabled.png');
-}
-
-/*
- * The style for the checked expander isn't right-to-left dependent, since the
- * arrow always points downward.  RTL doesn't also mean bottom-to-top.
- */

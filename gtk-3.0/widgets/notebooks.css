@@ -15,7 +15,6 @@
  */
 notebook > header + stack
 {
-	border-image-source: url('../../gtk-assets/common/borders/border.png');
 	border-image-width: 2px;
 	border-image-slice: 2;
 	padding: 2px;
@@ -26,7 +25,6 @@ notebook > header + stack
 
 notebook > header > tabs > tab
 {
-	border-image-source: url('../../gtk-assets/common/borders/border.png');
 	border-image-width: 1px 2px 2px 1px;
 	border-image-slice: 1 2 2 1;
 	background-color: @color_3;

@@ -12,6 +12,14 @@ infobar.warning
 	border-image-slice: 1 2 2 1;
 }
 
+infobar.error *,
+infobar.info *,
+infobar.question *,
+infobar.warning *
+{
+	color: @colored_border_fg_color;
+}
+
 infobar.error
 {
 	background-color: @error_destructive_bg_color;

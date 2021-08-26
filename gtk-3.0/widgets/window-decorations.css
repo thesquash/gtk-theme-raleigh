@@ -4,12 +4,19 @@
  * For windows that have no server-side or window manager decorations, use
  * the decorative border for menus.
  */
-decoration
+* > decoration
 {
-	border-image-source: url('../../gtk-assets/common/borders/menu-border.png');
 	border-image-width: 2px;
 	border-image-slice: 2;
 	padding: 2px;
+}
+
+/* Workaround to avoid double decorations around menus and tooltips */
+* > * > decoration,
+tooltip > decoration
+{
+	border: none;
+	padding: 0;
 }
 
 

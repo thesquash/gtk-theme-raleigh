@@ -9,7 +9,7 @@ separator
 {
 	border-style: solid;
 	border-width: 1px;
-	border-color: @color_1 @color_2 @color_2 @color_1;
+	border-color: @dark_base_color @light_base_color @light_base_color @dark_base_color;
 	margin: 2px;
 }
 
@@ -43,12 +43,10 @@ paned > separator:hover
 
 paned.horizontal > separator
 {
-	background-image: url('../../gtk-assets/common/separators/paned-separator-vertical.png');
 	min-width: 5px;
 }
 
 paned.vertical > separator
 {
-	background-image: url('../../gtk-assets/common/separators/paned-separator-horizontal.png');
 	min-height: 5px;
 }

@@ -11,7 +11,6 @@ frame
 frame > border
 {
 	margin: 0 -4px;
-	border-image-source: url('../../gtk-assets/common/borders/frame-border.png');
 	border-image-width: 2px;
 	border-image-slice: 2;
 }

@@ -17,7 +17,7 @@ progressbar trough
 	background-color: @color_3;
 	border-width: 1px;
 	border-style: solid;
-	border-color: @color_1 @color_2 @color_2 @color_1;
+	border-color: @dark_base_color @light_base_color @light_base_color @dark_base_color;
 }
 
 progressbar progress:not(.empty)

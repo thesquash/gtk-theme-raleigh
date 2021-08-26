@@ -28,7 +28,6 @@ scale.vertical.color > contents > trough > slider
 /* Give color swatches a sunken border, just like they had in GTK+ 2. */
 colorswatch
 {
-	border-image-source: url('../../gtk-assets/common/borders/border-sunken.png');
 	border-image-width: 2px 1px 1px 2px;
 	border-image-slice: 2 1 1 2;
 	padding: 2px 1px 1px 2px;
@@ -43,7 +42,6 @@ colorswatch
  */
 colorswatch#add-color-button
 {
-	border-image-source: url('../../gtk-assets/common/borders/border.png');
 	border-image-width: 1px 2px 2px 1px;
 	border-image-slice: 1 2 2 1;
 }
@@ -82,7 +80,6 @@ colorswatch.light:selected > overlay
 colorchooser box.popover
 {
 	background-color: @bg_color;
-	border-image-source: url('../../gtk-assets/common/borders/menu-border.png');
 	border-image-width: 2px;
 	border-image-slice: 2;
 	margin: 3px 0px 3px 0px;

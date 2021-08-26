@@ -12,7 +12,6 @@ popover,
 .app-notification
 {
 	background-color: @bg_color;
-	border-image-source: url('../../gtk-assets/common/borders/menu-border.png');
 	border-image-width: 2px;
 	border-image-slice: 2;
 	padding: 3px 2px 3px 2px;
@@ -29,7 +28,6 @@ popover,
 menu > arrow
 {
 	min-height: 16px;
-	border-image-source: url('../../gtk-assets/common/borders/border.png');
 	border-image-width: 1px 2px 2px 1px;
 	border-image-slice: 1 2 2 1;
 }
@@ -106,18 +104,6 @@ menuitem > check
 	min-height: 7px;
 	margin: 0px 6px 0px 2px;
 }
-menuitem > check:checked
-{
-	-gtk-icon-source: url('../../gtk-assets/light/checks/menu-item-check.png');
-}
-menuitem > check:checked:disabled
-{
-	-gtk-icon-source: url('../../gtk-assets/light/checks/menu-item-check-disabled.png');
-}
-menuitem:hover > check:checked
-{
-	-gtk-icon-source: url('../../gtk-assets/light/checks/menu-item-check-hover.png');
-}
 
 menuitem > radio
 {
@@ -126,25 +112,12 @@ menuitem > radio
 	min-height: 5px;
 	margin: 0px 8px 0px 3px;
 }
-menuitem > radio:checked
-{
-	-gtk-icon-source: url('../../gtk-assets/light/checks/menu-item-radio.png');
-}
-menuitem > radio:checked:disabled
-{
-	-gtk-icon-source: url('../../gtk-assets/light/checks/menu-item-radio-disabled.png');
-}
-menuitem:hover > radio:checked
-{
-	-gtk-icon-source: url('../../gtk-assets/light/checks/menu-item-radio-hover.png');
-}
 
 
 /* Menu bars */
 
 menubar
 {
-	border-image-source: url('../../gtk-assets/common/borders/border.png');
 	border-image-width: 1px 2px 2px 1px;
 	border-image-slice: 1 2 2 1;
 	padding: 2px 3px 2px 3px;

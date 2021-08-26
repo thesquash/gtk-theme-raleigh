@@ -15,7 +15,6 @@ button,
 button.flat:hover,
 button.link:hover
 {
-	border-image-source: url('../../gtk-assets/common/borders/border.png');
 	border-image-width: 1px 2px 2px 1px;
 	border-image-slice: 1 2 2 1;
 }
@@ -44,7 +43,6 @@ button.flat:checked,
 button.link:active,
 button.link:checked
 {
-	border-image-source: url('../../gtk-assets/common/borders/border-sunken.png');
 	border-image-width: 2px 1px 1px 2px;
 	border-image-slice: 2 1 1 2;
 }
@@ -52,6 +50,13 @@ button.link:checked
 /*
  * A special case for buttons marked as "suggested" or "destructive"
  */
+
+button.destructive-action *,
+button.suggested-action *
+{
+	color: @colored_border_fg_color;
+}
+
 button.destructive-action
 {
 	background-color: @error_destructive_bg_color;
@@ -109,7 +114,6 @@ button.link label
 
 switch
 {
-	border-image-source: url('../../gtk-assets/common/borders/border-sunken.png');
 	border-image-width: 2px 1px 1px 2px;
 	border-image-slice: 2 1 1 2;
 	padding: 2px;
