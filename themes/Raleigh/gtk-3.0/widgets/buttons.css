@@ -1,0 +1,130 @@
+/*
+ * Buttons, switches and links
+ */
+
+
+/* Buttons */
+
+button
+{
+	background-color: @bg_color;
+	padding: 6px;
+}
+
+button,
+button.flat:hover,
+button.link:hover
+{
+	border-image-width: 1px 2px 2px 1px;
+	border-image-slice: 1 2 2 1;
+}
+
+button:focus
+{
+	outline-offset: -4px;
+}
+
+button.flat,
+button.link
+{
+	border-image-source: none;
+	background-color: transparent;
+}
+
+button:hover
+{
+	background-color: @hover_bg_color;
+}
+
+button:active,
+button:checked,
+button.flat:active,
+button.flat:checked,
+button.link:active,
+button.link:checked
+{
+	border-image-width: 2px 1px 1px 2px;
+	border-image-slice: 2 1 1 2;
+}
+
+/*
+ * A special case for buttons marked as "suggested" or "destructive"
+ */
+
+button.destructive-action *,
+button.suggested-action *
+{
+	color: @colored_border_fg_color;
+}
+
+button.destructive-action
+{
+	background-color: @error_destructive_bg_color;
+	border-image-source: url('../../gtk-assets/common/borders/error-destructive-border.png');
+	outline-color: @colored_border_fg_color;
+}
+
+button.destructive-action:hover,
+button.destructive-action:active
+{
+	background-color: @destructive_hover_bg_color;
+}
+
+button.destructive-action:active,
+button.destructive-action:checked
+{
+	border-image-source: url('../../gtk-assets/common/borders/error-destructive-border-sunken.png');
+}
+
+button.suggested-action
+{
+	background-color: @question_suggested_bg_color;
+	border-image-source: url('../../gtk-assets/common/borders/question-suggested-border.png');
+	outline-color: @colored_border_fg_color;
+}
+
+button.suggested-action:hover,
+button.suggested-action:active
+{
+	background-color: @suggested_hover_bg_color;
+}
+
+button.suggested-action:active,
+button.suggested-action:checked
+{
+	border-image-source: url('../../gtk-assets/common/borders/question-suggested-border-sunken.png');
+}
+
+
+/* Links */
+
+.link,
+:link,
+button.link label
+{
+	color: @link_color;
+	text-decoration: underline;
+}
+
+
+/*
+ * Switches
+ *
+ *  - Yes, I know -- GTK+ 2 didn't have a switch widget, but I figure this
+ *    is about how it would have looked had it included one.
+ */
+
+switch
+{
+	border-image-width: 2px 1px 1px 2px;
+	border-image-slice: 2 1 1 2;
+	padding: 2px;
+}
+
+switch > slider
+{
+	background-color: @selected_bg_color;
+	border-image-source: url('../../gtk-assets/common/borders/progress-border.png');
+	border-image-width: 1px 2px 2px 1px;
+	border-image-slice: 1 2 2 1;
+}

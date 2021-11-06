@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Raleigh
+Comment=A theme which closely mimics Red Hat's Raleigh GTK+ theme from ~2002
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Raleigh
+MetacityTheme=Raleigh
+IconTheme=Raleigh
+NotificationTheme=standard

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Raleigh-Dark
+Comment=A dark theme inspired by Red Hat's Raleigh GTK+ theme from ~2002
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Raleigh-Dark
+MetacityTheme=Raleigh-Dark
+IconTheme=Raleigh
+NotificationTheme=standard

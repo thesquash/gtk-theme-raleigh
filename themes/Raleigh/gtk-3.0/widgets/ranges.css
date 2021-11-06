@@ -1,0 +1,119 @@
+/*
+ * Ranges (scrollbars and sliders)
+ */
+
+
+/*
+ * Under any normal circumstances, we'd add the border to the trough, not
+ * the entire scrollbar/scale node.  But we actually *want* a border around
+ * the entire scrolbar/scale -- that's how it was done in GTK+ 2!
+ */
+scrollbar > contents,
+scale > contents,
+scale > marks > mark > indicator /* Give scale indicators a 3D-ish look-and-feel */
+{
+	border-color: @dark_base_color @light_base_color @light_base_color @dark_base_color;
+	border-style: solid;
+	border-width: 1px;
+
+  /*
+   * This is to remove the distracting and redundant black lines that would
+   * otherwise appear in the center of our fine scale indicator marks.
+   */
+  color: transparent;
+}
+
+scrollbar > contents > trough,
+scale > contents > trough
+{
+	background-color: @color_3;
+}
+
+scrollbar > contents > trough > slider,
+scale > contents > trough > slider
+{
+	background-color: @bg_color;
+	border-image-width: 1px 2px 2px 1px;
+	border-image-slice: 1 2 2 1;
+}
+
+scrollbar.horizontal > contents > trough > slider,
+scale.horizontal > contents > trough > slider
+{
+	min-width: 30px;
+	min-height: 14px;
+}
+
+scrollbar.vertical > contents > trough > slider,
+scale.vertical > contents > trough > slider
+{
+	min-width: 14px;
+	min-height: 30px;
+}
+
+scrollbar > contents > trough > slider:hover,
+scrollbar > contents > trough > slider:active,
+scale > contents > trough > slider:hover,
+scale > contents > trough > slider:active
+{
+	background-color: @hover_bg_color;
+}
+
+
+/* Scale widget-specific styling */
+
+scale.horizontal > contents > trough
+{
+	padding: 0 15px 0 15px;
+}
+
+scale.vertical > contents > trough
+{
+	padding: 15px 0 15px 0;
+}
+
+/*
+ * Add the tick mark to the scale slider, as an indicator of the scale's
+ * current value.
+ */
+scale > contents > trough > slider
+{
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+scale.horizontal > marks > mark > indicator
+{
+	min-height: 10px;
+}
+
+scale.vertical > marks > mark > indicator
+{
+	min-width: 10px;
+}
+
+
+/* Scrollbar-specific styling */
+
+/*
+ * - The width and height are set here because otherwise the scrollbar
+ *   buttons would look miniscule!  (Actually, they'd be nonexistent.)
+ *
+ * - The padding is explicitly set to zero since generic button widgets have
+ *   a fairly enormous default padding, which if applied here would necessarily
+ *   make the scrollbar buttons bigger than the trough.  That would be bad.
+ *
+ * - The background and icon style properties are set up in preparation for
+ *   below (NOW MOVED TO gtk-assets.css), where we apply custom arrow images
+ *   to each scrollbar button.
+ */
+scrollbar > contents > button
+{
+	-gtk-icon-source: none;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 14px;
+	min-width: 14px;
+	padding: 0;
+}

@@ -1,0 +1,58 @@
+*
+{
+	-gtk-icon-style: regular;
+	color: @fg_color;
+}
+
+*:disabled,
+*:disabled *
+{
+	color: @insensitive_fg_color;
+	text-shadow: 1px 1px @insensitive_text_shadow_color;
+	-gtk-icon-effect: dim;
+	-gtk-icon-shadow: 1px 1px @insensitive_text_shadow_color;
+}
+
+selection,
+.selection,
+:selected,
+.selection *,
+:selected *
+{
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
+}
+
+/*
+selection:not(:focus),
+.selection:not(:focus),
+:selected:not(:focus),
+.selection:not(:focus) *,
+:selected:not(:focus) *
+{
+	background-color: @selected_unfocused_bg_color;
+	color: @selected_unfocused_fg_color;
+}
+*/
+
+:focus
+{
+	outline-color: @fg_color;
+	outline-offset: -1px;
+	outline-style: dotted;
+	outline-width: 1px;
+}
+
+.background
+{
+	background-color: @bg_color;
+}
+
+
+/*
+ * Import the code for specific widgets, workarounds for cross-toolkit
+ * inconsistencies (such as linked buttons), and per-application styles.
+ */
+@import url('widgets/all.css');
+@import url('workarounds/all.css');
+@import url('application-styles/all.css');

@@ -1,9 +1,21 @@
-<img alt="Cinnamon 5.0.5 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-Cinnamon.png"/>
-<img alt="GNOME 40 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-GNOME-40.png"/>
-<img alt="MATE 1.24.1 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-MATE.png"/>
+# Gtk-Theme-Raleigh:  Reviving An Era Gone By
+
+## MATE (1.24.1):
+<img alt="MATE 1.24.1 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-MATE-1-24.png"/>
+<img alt="MATE 1.24.1 desktop with Gtk-Theme-Raleigh Dark theme" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-Dark-MATE-1-24.png"/>
+
+## MATE (1.26.0):
+<img alt="MATE 1.26.0 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-MATE-1-26.png"/>
+<img alt="MATE 1.26.0 desktop with Gtk-Theme-Raleigh Dark theme" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-Dark-MATE-1-26.png"/>
+
+## XFCE (4.17.0):
 <img alt="XFCE 4.17.0 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-XFCE.png"/>
 
-# Gtk-Theme-Raleigh
+## Cinnamon (5.0.5):
+<img alt="Cinnamon 5.0.5 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-Cinnamon.png"/>
+
+## GNOME (40):
+<img alt="GNOME 40 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/Raleigh-GNOME-40.png"/>
 
 Gtk-Theme-Raleigh is a re-creation of the original Raleigh theme, Red Hat's
 (and later the GTK Project's) default theme for GTK+ 2.  Gtk-Theme-Raleigh
@@ -22,32 +34,23 @@ many artistic touches of the look-alike theme's own creator; as such, many
 "look-alike" themes actually look very different from the themes they are
 trying to emulate.
 
-**Note:**  Gtk-Theme-Raleigh is experimental and does not look perfect yet.
-I am currently also working on several other similar projects, one of which
-would potentially render this theme unnecessary.  I believe the best solution
-lies in the other project I am working on; but for as long as I haven't
-completed my other project, I shall improve this theme and accept other's
-improvements to this theme as well.  In other words, don't expect all
-applications to look perfect as of yet!
-
 ## What's New?
 
-Gtk-Theme-Raleigh now has few known bugs, and displays all of the `gtk3-demo`
-applications *very* well.  It is also a truly cross-desktop theme now, as it
-displays properly on the Cinnamon, MATE, and XFCE desktops.
-***It even looks good on GNOME 40!***
+The dark variant of the theme is available as a separate theme now,
+so you can explicitly state that you want to use the theme `Raleigh-Dark`
+instead of `Raleigh`, if you like dark themes everywhere.
 
-The theme code has been modularized, and the code should be more readable
-now thanks to dozens of new comments in the CSS.
+For MATE and GNOME Flashback users, a Metacity / Marco theme has been designed
+to look like the first theme ever used for Metacity.  This window border theme
+is based on Atlanta and is also called `Raleigh` and `Raleigh-Dark`.
 
-The dark variant is complete.
+Several bug fixes have been applied to the theme, mostly regarding the dark
+variant.
 
-Right-to-left users should now be pleased by the fact that this theme is
-now fully right-to-left compliant, as far as I am aware.
-
-A GTK 4 port is being considered, though is unlikely since GTK 4 neutralizes
-some of the theme's classic looks -- GTK 4 eliminated some widgets and
-components of widgets which are necessary for the full Raleigh look-and-feel.
+Theme package files, in addition to a new classic-GNOME-esque icon theme, have
+been added to this package, thus completing the theme and making it easier to
+use than ever (and more authentic too).  The icon theme is somewhat incomplete
+as of yet, but should look presentable on at least a simple MATE desktop.
 
 ## Installation
 
@@ -60,13 +63,15 @@ the local copy.  If you want to install the theme for your own user only
 (and not for everyone on the system), run:
 
 ```
-mkdir -p ~/.themes/Raleigh
-cp gtk-3.0 gtk-assets ~/.themes/Raleigh
+mkdir -p ~/.themes ~/.icons
+cp -a themes/Raleigh themes/Raleigh-Dark ~/.themes
+cp -a icons/Raleigh ~/.icons
 ```
 
 **To install the theme system-wide:**
 
 ```
-mkdir -p /usr/share/themes/Raleigh
-cp gtk-3.0 gtk-assets /usr/share/themes/Raleigh
+mkdir -p /usr/share/themes /usr/share/icons
+sudo cp -a themes/Raleigh themes/Raleigh-Dark /usr/share/themes
+sudo cp -a icons/Raleigh /usr/share/icons
 ```

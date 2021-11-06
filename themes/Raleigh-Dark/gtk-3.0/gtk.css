@@ -1,0 +1,39 @@
+@define-color light_base_color    #434444;
+@define-color base_color          #232424;
+@define-color dark_base_color     #111111;
+@define-color darkest_base_color  #000000;
+
+@define-color bg_color @base_color;
+@define-color fg_color #ffffff;
+
+@define-color selected_bg_color #49667f;
+@define-color selected_fg_color #ffffff;
+@define-color selected_unfocused_bg_color shade(@base_color, .75);
+@define-color selected_unfocused_fg_color #ffffff;
+
+@define-color tooltip_bg_color #12110d;
+@define-color tooltip_fg_color @fg_color;
+
+@define-color link_color #7777ff;
+@define-color visited_link_color #cc929c;
+
+@define-color color_1 #999999;
+@define-color color_2 @light_base_color;
+@define-color color_3 #333333;
+
+@define-color insensitive_fg_color #999999;
+@define-color insensitive_text_shadow_color #000000;
+
+@define-color hover_bg_color #333333;
+
+@define-color colored_border_fg_color #000000;
+@define-color error_destructive_bg_color #f03838;
+@define-color info_bg_color #ffffbf;
+@define-color question_suggested_bg_color #8cb0d7;
+@define-color warning_bg_color #fcaf3e;
+
+@define-color destructive_hover_bg_color shade(@error_destructive_bg_color, 1.1);
+@define-color suggested_hover_bg_color shade(@question_suggested_bg_color, 1.1);
+
+@import url('main.css');
+@import url('gtk-dark-assets.css');
