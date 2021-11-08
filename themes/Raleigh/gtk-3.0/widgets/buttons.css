@@ -57,6 +57,17 @@ button.suggested-action *
 	color: @colored_border_fg_color;
 }
 
+button.destructive-action:disabled *,
+button.suggested-action:disabled *,
+button.destructive-action :disabled,
+button.suggested-action :disabled
+{
+	color: @insensitive_fg_color;
+	text-shadow: 1px 1px @colored_border_insensitive_text_shadow_color;
+	-gtk-icon-effect: dim;
+	-gtk-icon-shadow: 1px 1px @colored_border_insensitive_text_shadow_color;
+}
+
 button.destructive-action
 {
 	background-color: @error_destructive_bg_color;

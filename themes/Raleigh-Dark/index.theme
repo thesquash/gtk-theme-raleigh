@@ -7,5 +7,5 @@ Encoding=UTF-8
 [X-GNOME-Metatheme]
 GtkTheme=Raleigh-Dark
 MetacityTheme=Raleigh-Dark
-IconTheme=Raleigh
+IconTheme=Raleigh-Dark
 NotificationTheme=standard
