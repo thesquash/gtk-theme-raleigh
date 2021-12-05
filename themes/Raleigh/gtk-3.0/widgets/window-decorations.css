@@ -34,11 +34,24 @@ tooltip > decoration
 	padding: 6px;
 }
 
+.titlebar:backdrop
+{
+	background-color: @bg_color;
+	border-image-source: url('.themes/Raleigh-Dark/gtk-assets/dark/borders/border.png');
+}
+
 .titlebar .title,
 .titlebar .subtitle
 {
 	color: @selected_fg_color;
 }
+
+.titlebar:backdrop .title,
+.titlebar:backdrop .subtitle
+{
+	color: @fg_color;
+}
+
 .titlebar .title
 {
 	font-weight: bold;

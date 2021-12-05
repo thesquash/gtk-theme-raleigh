@@ -24,6 +24,11 @@ button:focus
 	outline-offset: -4px;
 }
 
+button.default:not(.flat):not(.link)
+{
+  box-shadow: 0 0 0 1px @darkest_base_color;
+}
+
 button.flat,
 button.link
 {

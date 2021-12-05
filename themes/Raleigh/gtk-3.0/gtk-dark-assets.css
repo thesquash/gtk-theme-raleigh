@@ -28,6 +28,8 @@ notebook > header > tabs > tab,
 /* From widgets/ranges.css */
 scrollbar > contents > trough > slider,
 scale > contents > trough > slider,
+/* From widgets/window-decorations.css */
+.titlebar:backdrop,
 /* From application-styles/wnck.css */
 wnck-tasklist > button.flat,
 /* From application-styles/mate-panel.css */

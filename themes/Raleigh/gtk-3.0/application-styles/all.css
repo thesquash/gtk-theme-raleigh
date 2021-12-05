@@ -19,3 +19,7 @@
  * sure get used by a lot of different desktops!
  */
 @import url('wnck.css');
+
+
+/* The LightDM GTK+ Greeter */
+@import url('lightdm.css');

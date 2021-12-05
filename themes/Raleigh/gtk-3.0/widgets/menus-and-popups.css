@@ -83,6 +83,7 @@ popover.menu modelbutton:hover
 menuitem:hover > label,
 menuitem:hover > label > accelerator,
 menuitem:hover > box > label,
+menuitem:hover > image,
 menuitem:hover > arrow,
 menuitem:hover > cellview *,
 popover.menu modelbutton:hover *
