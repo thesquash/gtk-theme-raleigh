@@ -28,14 +28,32 @@ radiobutton:hover
 	background-repeat: no-repeat;
 	min-width: 13px;
 	min-height: 13px;
+}
+
+:not(menuitem) > check:first-child,
+:not(menuitem) > radio:first-child
+{
 	margin-right: 6px;
 }
 
-:not(menuitem) > check:dir(rtl),
-:not(menuitem) > radio:dir(rtl)
+:not(menuitem) > check:first-child:dir(rtl),
+:not(menuitem) > radio:first-child:dir(rtl)
 {
 	margin-left: 6px;
 	margin-right: 0;
+}
+
+:not(menuitem) > check:last-child,
+:not(menuitem) > radio:last-child
+{
+	margin-left: 6px;
+}
+
+:not(menuitem) > check:last-child:dir(rtl),
+:not(menuitem) > radio:last-child:dir(rtl)
+{
+	margin-left: 0;
+	margin-right: 6px;
 }
 
 :not(menuitem) > check
