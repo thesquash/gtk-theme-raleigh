@@ -1,24 +1,74 @@
 [Icon Theme]
 Name=Raleigh
 Comment=A redo of the GNOME icon theme as it stood until 2006
-Directories=16,20,24,32,48
+Directories=generic/16,generic/20,generic/24,generic/32,generic/48,mate/16,mate/20,mate/24,mate/32,mate/48,other/16,other/20,other/24,other/32,other/48
 
-[16]
+
+# Generic icons not specific to any desktop environment or application in
+# particular
+
+[generic/16]
 Size=16
 Type=Fixed
 
-[20]
+[generic/20]
 Size=20
 Type=Fixed
 
-[24]
+[generic/24]
 Size=24
 Type=Fixed
 
-[32]
+[generic/32]
 Size=32
 Type=Fixed
 
-[48]
+[generic/48]
+Size=48
+Type=Fixed
+
+
+# Icons specific to MATE and MATE applications
+
+[mate/16]
+Size=16
+Type=Fixed
+
+[mate/20]
+Size=20
+Type=Fixed
+
+[mate/24]
+Size=24
+Type=Fixed
+
+[mate/32]
+Size=32
+Type=Fixed
+
+[mate/48]
+Size=48
+Type=Fixed
+
+
+# Icons specific to applications not specifically part of a desktop environment
+
+[other/16]
+Size=16
+Type=Fixed
+
+[other/20]
+Size=20
+Type=Fixed
+
+[other/24]
+Size=24
+Type=Fixed
+
+[other/32]
+Size=32
+Type=Fixed
+
+[other/48]
 Size=48
 Type=Fixed
