@@ -19,9 +19,9 @@ button.link:hover
 	border-image-slice: 1 2 2 1;
 }
 
-button:not(.flat):not(.link) *,
-button.flat:hover *,
-button.link:hover *
+button:not(.flat):not(.link) *:not(:disabled),
+button.flat:hover *:not(:disabled),
+button.link:hover *:not(:disabled)
 {
   color: @fg_color;
 }

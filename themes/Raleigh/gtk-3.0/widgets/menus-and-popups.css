@@ -74,13 +74,13 @@ popover.menu modelbutton
 	padding: 4px;
 }
 
-menuitem:not(:hover) > label,
-menuitem:not(:hover) > label > accelerator,
-menuitem:not(:hover) > box > label,
-menuitem:not(:hover) > image,
-menuitem:not(:hover) > arrow,
-menuitem:not(:hover) > cellview *,
-popover.menu modelbutton:not(:hover) *
+menuitem:not(:hover):not(:disabled) > label,
+menuitem:not(:hover):not(:disabled) > label > accelerator,
+menuitem:not(:hover):not(:disabled) > box > label,
+menuitem:not(:hover):not(:disabled) > image,
+menuitem:not(:hover):not(:disabled) > arrow,
+menuitem:not(:hover):not(:disabled) > cellview *,
+popover.menu modelbutton:not(:hover):not(:disabled) *
 {
 	color: @fg_color;
 }
