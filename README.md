@@ -34,23 +34,10 @@ many artistic touches of the look-alike theme's own creator; as such, many
 "look-alike" themes actually look very different from the themes they are
 trying to emulate.
 
-## What's New?
-
-The dark variant of the theme is available as a separate theme now,
-so you can explicitly state that you want to use the theme `Raleigh-Dark`
-instead of `Raleigh`, if you like dark themes everywhere.
-
-For MATE and GNOME Flashback users, a Metacity / Marco theme has been designed
-to look like the first theme ever used for Metacity.  This window border theme
-is based on Atlanta and is also called `Raleigh` and `Raleigh-Dark`.
-
-Several bug fixes have been applied to the theme, mostly regarding the dark
-variant.
-
-Theme package files, in addition to a new classic-GNOME-esque icon theme, have
-been added to this package, thus completing the theme and making it easier to
-use than ever (and more authentic too).  The icon theme is somewhat incomplete
-as of yet, but should look presentable on at least a simple MATE desktop.
+**Version 1.0.0 has been released!**  At this point, this theme is perfectly
+usable on the MATE desktop to the best of my knowledge.  Chances are, the
+theme will not look perfect on other desktops yet.  Please file issues for
+any inconsistencies and/or defects you may spot.  Even small ones!
 
 ## Installation
 
@@ -75,3 +62,5 @@ mkdir -p /usr/share/themes /usr/share/icons
 sudo cp -a themes/Raleigh themes/Raleigh-Dark /usr/share/themes
 sudo cp -a icons/Raleigh /usr/share/icons
 ```
+
+That's all there is to it!
