@@ -19,6 +19,13 @@ button.link:hover
 	border-image-slice: 1 2 2 1;
 }
 
+button:not(.flat):not(.link) *,
+button.flat:hover *,
+button.link:hover *
+{
+  color: @fg_color;
+}
+
 button:focus
 {
 	outline-offset: -4px;
@@ -56,8 +63,12 @@ button.link:checked
  * A special case for buttons marked as "suggested" or "destructive"
  */
 
-button.destructive-action *,
-button.suggested-action *
+button.destructive-action:not(.flat):not(.link) *,
+button.destructive-action.flat:hover *,
+button.destructive-action.link:hover *,
+button.suggested-action:not(.flat):not(.link) *,
+button.suggested-action.flat:hover *,
+button.suggested-action.link:hover *
 {
 	color: @colored_border_fg_color;
 }

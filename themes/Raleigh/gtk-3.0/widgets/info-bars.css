@@ -12,16 +12,6 @@ infobar.warning
 	border-image-slice: 1 2 2 1;
 }
 
-/*
- * FIXME:
- * Take special care to only set the text/foreground color of a limited number
- * of widgets -- specifically, those that do not have their own backgrounds,
- * but which instead draw on top of their parent's background, e.g labels.
- * If we set the foreground color on all descendants of an info bar, button
- * labels and other such widgets would most likely change to unreadable colors,
- * especially in the dark variant.
- */
-
 infobar.error *,
 infobar.info *,
 infobar.question *,

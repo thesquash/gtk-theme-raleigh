@@ -22,10 +22,11 @@ separator
  * This kind of separator includes a centered background image of seven dots
  * to show that the separator can be dragged.
  *
- * TODO:  Does anybody know how to center a background image using GTK and
- * yet ensure that GTK never blurs the image by centering the image on a
- * half-pixel boundary?  These separator images would look way better if
- * they were not often blurred like that.
+ * XXX:  Due to a GTK+ bug, centered backgrounds are aligned at the true center
+ * of a widget / CSS node even if one or both dimensions of the node are odd
+ * numbers.  Therefore, the background image will be blurred if the paned
+ * widget is an odd number of pixels tall.  There appears to be no workaround
+ * for this bug as of yet.
  */
 
 paned > separator

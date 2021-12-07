@@ -74,6 +74,17 @@ popover.menu modelbutton
 	padding: 4px;
 }
 
+menuitem:not(:hover) > label,
+menuitem:not(:hover) > label > accelerator,
+menuitem:not(:hover) > box > label,
+menuitem:not(:hover) > image,
+menuitem:not(:hover) > arrow,
+menuitem:not(:hover) > cellview *,
+popover.menu modelbutton:not(:hover) *
+{
+	color: @fg_color;
+}
+
 menuitem:hover,
 popover.menu modelbutton:hover
 {
