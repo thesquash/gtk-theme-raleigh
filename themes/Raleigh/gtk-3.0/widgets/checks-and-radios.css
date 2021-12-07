@@ -36,25 +36,12 @@ radiobutton:hover
 	margin-right: 6px;
 }
 
-:not(menuitem) > check:first-child:dir(rtl),
-:not(menuitem) > radio:first-child:dir(rtl)
-{
-	margin-left: 6px;
-	margin-right: 0;
-}
-
 :not(menuitem) > check:last-child,
 :not(menuitem) > radio:last-child
 {
 	margin-left: 6px;
 }
 
-:not(menuitem) > check:last-child:dir(rtl),
-:not(menuitem) > radio:last-child:dir(rtl)
-{
-	margin-left: 0;
-	margin-right: 6px;
-}
 
 :not(menuitem) > check
 {

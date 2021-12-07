@@ -1,0 +1,36 @@
+# Most of the styling is done natively by GTK+ 2 since the default GTK+ 2
+# style is Raleigh.  This file only sets the color scheme to use.
+
+#gtk-color-scheme = "base_color:#ffffff\nfg_color:#000000\ntooltip_fg_color:#000000\nselected_bg_color:#49667f\nselected_fg_color:#ffffff\ntext_color:#000000\nbg_color:#dcdad5\ntooltip_bg_color:#eee1b3\nlink_color:#0000ee\nvisited_link_color:#551a8b"
+
+
+#style "default" {
+#	GtkWidget::link-color         = @link_color
+#	GtkWidget::visited-link-color = @visited_link_color
+
+#	bg[NORMAL]        = @bg_color
+#	bg[PRELIGHT]      = '#eeeeee'
+#	bg[SELECTED]      = '#49667f'
+#	bg[INSENSITIVE]   = '#dcdad5'
+#	bg[ACTIVE]        = '#eeeeee'
+
+#	fg[NORMAL]        = '#000000'
+#	fg[PRELIGHT]      = '#000000'
+#	fg[SELECTED]      = '#ffffff'
+#	fg[INSENSITIVE]   = '#777777'
+#	fg[ACTIVE]        = '#000000'
+
+#	text[NORMAL]      = '#000000'
+#	text[PRELIGHT]    = '#000000'
+#	text[SELECTED]    = '#ffffff'
+#	text[INSENSITIVE] = '#777777'
+#	text[ACTIVE]      = '#000000'
+
+#	base[NORMAL]      = '#ffffff'
+#	base[PRELIGHT]    = '#ffffff'
+#	base[SELECTED]    = '#49667f'
+#	base[INSENSITIVE] = '#dcdad5'
+#	base[ACTIVE]      = '#ffffff'
+#}
+
+#class "GtkWidget" style "default"
