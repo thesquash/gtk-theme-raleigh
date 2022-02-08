@@ -1,4 +1,10 @@
-#login_window
+/* Give LightDM "dialogs" a nice border like we give windows with CSDs */
+
+#login_window,
+#shutdown_dialog,
+#restart_dialog
 {
-  border: 1px solid @darkest_base_color;
+	border-image-width: 2px;
+	border-image-slice: 2;
+	padding: 2px;
 }

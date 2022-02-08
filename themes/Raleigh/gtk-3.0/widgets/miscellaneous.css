@@ -54,6 +54,14 @@ toolbar
 }
 
 
+/* File choosers */
+
+filechooser > actionbar
+{
+	margin: 6px;
+}
+
+
 /* Places sidebar:  Used primarily in the file chooser. */
 
 /*

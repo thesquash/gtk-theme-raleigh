@@ -71,7 +71,11 @@ popover,
 /* From widgets/window-decorations.css */
 * > decoration,
 /* From application-styles/mate-panel.css */
-#MatePanelPopupWindow
+#MatePanelPopupWindow,
+/* From application-styles/lightdm.css */
+#login_window,
+#shutdown_dialog,
+#restart_dialog
 {
 	border-image-source: url('../gtk-assets/light/borders/menu-border.png');
 }
