@@ -7,7 +7,7 @@
 
 .linked.horizontal > button
 {
-	margin: 0 6px 0 6px;
+	margin: 0 3px 0 3px;
 }
 .linked.horizontal > button:first-child
 {
@@ -20,7 +20,7 @@
 
 .linked.vertical > button
 {
-	margin: 6px 0 6px 0;
+	margin: 3px 0 3px 0;
 }
 .linked.vertical > button:first-child
 {

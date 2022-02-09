@@ -35,6 +35,19 @@ notebook > header > tabs > tab:checked
 	background-color: @bg_color;
 }
 
+/*
+ * Stupidly, the focus pseudo-class is not applied to individual notebook
+ * tabs; it is applied to the notebook itself, and the focus rectangle should
+ * instead be drawn around whichever tab is currently active.
+ */
+notebook:focus > header > tabs > tab:checked
+{
+	outline-color: @fg_color;
+	outline-offset: -4px;
+	outline-style: dotted;
+	outline-width: 1px;
+}
+
 notebook > header.top > tabs > tab,
 notebook > header.bottom > tabs > tab
 {
