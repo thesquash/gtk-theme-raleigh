@@ -1,0 +1,26 @@
+/* XPM */
+static char *button_close_pressed[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 4 1 ",
+"  c #ffffff",
+". c #111111",
+"X c #232424",
+"o c #434444",
+/* pixels */
+"ooooooooooooooo.",
+"o.............o.",
+"o.XXXXXXXXXXXXo.",
+"o.XXXXXXXXXXXXo.",
+"o.XXXXXXXXXXXXo.",
+"o.XX  XXXXX  Xo.",
+"o.XXX  XXX  XXo.",
+"o.XXXX  X  XXXo.",
+"o.XXXXX   XXXXo.",
+"o.XXXXX   XXXXo.",
+"o.XXXX  X  XXXo.",
+"o.XXX  XXX  XXo.",
+"o.XX  XXXXX  Xo.",
+"o.XXXXXXXXXXXXo.",
+"ooooooooooooooo.",
+"................"
+};

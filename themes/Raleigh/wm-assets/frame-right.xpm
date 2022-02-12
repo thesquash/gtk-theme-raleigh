@@ -1,0 +1,8 @@
+/* XPM */
+static char * frame_right_xpm[] = {
+"7 1 4 1",
+" 	c None",
+".	c #000000",
+"+	c #DCDAD5",
+"@	c #777777",
+".++++@."};

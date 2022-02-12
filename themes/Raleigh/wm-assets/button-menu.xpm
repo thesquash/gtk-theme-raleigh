@@ -1,0 +1,25 @@
+/* XPM */
+static char *button_menu[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 3 1 ",
+"  c black",
+". c #DCDAD5",
+"X c white",
+/* pixels */
+"..            ..",
+"...XXXXXXXXXXXX.",
+"..            ..",
+"...XXXXXXXXXXXX.",
+"..            ..",
+"...XXXXXXXXXXXX.",
+"..            ..",
+"...XXXXXXXXXXXX.",
+"..            ..",
+"...XXXXXXXXXXXX.",
+"..            ..",
+"...XXXXXXXXXXXX.",
+"..            ..",
+"...XXXXXXXXXXXX.",
+"..            ..",
+"...XXXXXXXXXXXX."
+};

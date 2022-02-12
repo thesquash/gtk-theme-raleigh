@@ -1,0 +1,26 @@
+/* XPM */
+static char *button_minimize[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 4 1 ",
+"  c #ffffff",
+". c #111111",
+"X c #232424",
+"o c #434444",
+/* pixels */
+"...............o",
+".ooooooooooooo.o",
+".oXXXXXXXXXXXX.o",
+".oXXXXXXXXXXXX.o",
+".oXXXXXXXXXXXX.o",
+".oXXXXXXXXXXXX.o",
+".oXXXXXXXXXXXX.o",
+".oXXXXXXXXXXXX.o",
+".oXXXXXXXXXXXX.o",
+".oXXXXXXXXXXXX.o",
+".oX         XX.o",
+".oX         XX.o",
+".oXXXXXXXXXXXX.o",
+".oXXXXXXXXXXXX.o",
+"...............o",
+"oooooooooooooooo"
+};

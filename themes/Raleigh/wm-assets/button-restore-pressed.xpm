@@ -1,0 +1,26 @@
+/* XPM */
+static char *button_restore_pressed[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 4 1 ",
+"  c black",
+". c #9E9A91",
+"X c #DCDAD5",
+"o c white",
+/* pixels */
+"ooooooooooooooo.",
+"o.............o.",
+"o.XXXXXXXXXXXXo.",
+"o.XXXXXXXXXXXXo.",
+"o.XXXXXXXXXXXXo.",
+"o.XX       XXXo.",
+"o.XX       XXXo.",
+"o.XX XXXXX XXXo.",
+"o.XX X       Xo.",
+"o.XX X       Xo.",
+"o.XX   XXXXX Xo.",
+"o.XXXX XXXXX Xo.",
+"o.XXXX       Xo.",
+"o.XXXXXXXXXXXXo.",
+"ooooooooooooooo.",
+"................"
+};

@@ -3,8 +3,8 @@
   <info>
     <name>Raleigh</name>
     <author>Gordon N. Squash</author>
-    <copyright>&#xC2; 2021 Gordon N. Squash</copyright>
-    <date>September 4, 2021</date>
+    <copyright>&#xC2; 2021-2022 Gordon N. Squash</copyright>
+    <date>September 4, 2021; February 11, 2022</date>
     <description>Simple, clean, and classic theme, inspired by an old Red Hat version.</description>
   </info>
   <frame_geometry name="normal">
@@ -22,9 +22,9 @@
   </frame_geometry>
   <!-- strip borders off the normal geometry -->
   <frame_geometry name="normal_small_borders" parent="normal">
-    <distance name="left_width" value="2"/>
-    <distance name="right_width" value="2"/>
-    <distance name="bottom_height" value="2"/>
+    <distance name="left_width" value="0"/>
+    <distance name="right_width" value="0"/>
+    <distance name="bottom_height" value="0"/>
     <distance name="left_titlebar_edge" value="2"/>
     <distance name="right_titlebar_edge" value="2"/>
   </frame_geometry>
