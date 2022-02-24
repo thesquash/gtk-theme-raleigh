@@ -21,7 +21,7 @@ levelbar trough
 	border-color: @dark_base_color @light_base_color @light_base_color @dark_base_color;
 }
 
-progressbar progress:not(.empty),
+progressbar > trough:not(.empty) > progress,
 levelbar progress:not(.empty)
 {
 	background-color: @selected_bg_color;
