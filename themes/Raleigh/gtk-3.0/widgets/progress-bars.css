@@ -1,19 +1,24 @@
 /* Progress bars */
 
 progressbar.horizontal trough,
-progressbar.horizontal progress
+progressbar.horizontal progress,
+.trough.horizontal,
+.progressbar.horizontal
 {
 	min-height: 24px;
 }
 
 progressbar.vertical trough,
-progressbar.vertical progress
+progressbar.vertical progress,
+.trough.vertical,
+.progressbar.vertical
 {
 	min-width: 24px;
 }
 
 progressbar trough,
-levelbar trough
+levelbar trough,
+.trough
 {
 	background-color: @color_3;
 	border-width: 1px;
@@ -22,7 +27,8 @@ levelbar trough
 }
 
 progressbar > trough:not(.empty) > progress,
-levelbar progress:not(.empty)
+levelbar progress:not(.empty),
+.progressbar
 {
 	background-color: @selected_bg_color;
 	border-image-source: url('../../gtk-assets/common/borders/progress-border.png');
