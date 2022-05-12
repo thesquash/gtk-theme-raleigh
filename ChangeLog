@@ -1,0 +1,12 @@
+Changes from 1.0.0 to 1.2.0
+
+ - More icons
+
+ - Includes better support for desktops other than MATE, including window
+   border themes for XFWM4 / XFCE
+
+ - A handful of bugfixes, many relating to Caja
+
+ - I added this Changelog!  ;-)
+
+Have fun with this release!
