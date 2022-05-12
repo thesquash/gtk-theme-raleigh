@@ -91,7 +91,9 @@ frame > border
 /* From widgets/lists-and-views.css */
 entry,
 textview,
-:not(stack) > list
+:not(stack) > list,
+/* From application-styles/caja.css */
+widget.entry:not(:selected)
 {
 	border-image-source: url('../gtk-assets/light/borders/entry-border.png');
 }

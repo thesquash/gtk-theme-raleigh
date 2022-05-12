@@ -24,3 +24,24 @@ widget.view.rubberband
 {
 	background-color: alpha (@selected_bg_color, 0.6);
 }
+
+/*
+ * The following style declaration themes EelEditableLabels, which are used
+ * primary by Caja (and possibly other file managers) for the pop-up text
+ * fields used for renaming files in Icon and Compact views.
+ *
+ * Even though an EelEditableLabel is not a GtkEntry, we try our best to make
+ * the two look identical.
+ */
+widget.entry:not(:selected)
+{
+	/*
+	 * Oddly, `background-color` does not work here; we must use
+	 * `background` in order for EelEditableLabels to have an appropriate
+	 * background.
+	 */
+	background: @color_2;
+	border-image-width: 2px;
+	border-image-slice: 2;
+	border-radius: 0;
+}
