@@ -23,7 +23,6 @@ selection,
 	color: @selected_fg_color;
 }
 
-/*
 selection:not(:focus),
 .selection:not(:focus),
 :selected:not(:focus),
@@ -33,7 +32,6 @@ selection:not(:focus),
 	background-color: @selected_unfocused_bg_color;
 	color: @selected_unfocused_fg_color;
 }
-*/
 
 :focus
 {

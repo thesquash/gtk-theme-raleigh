@@ -72,6 +72,22 @@ entry
 	padding: 4px;
 }
 
+/*
+ * Normally, any widget that is selected and focused will have a background of
+ * @selected_bg_color, and any widget that is selected but not focused will
+ * be colored @selected_unfocused_bg_color.  "Completion" pop-ups from entry
+ * widgets are composed of a treeview inside a pop-up window; whenever the
+ * user hovers the mouse over one of the completion entries, it implicitly
+ * selects that entry in the treeview, but does not focus it.  This will color
+ * the hovered item gray instead of blue, whereas GTK+ 2 Raleigh colored the
+ * items blue anyway.  So add an override to color completion entries blue.
+ */
+entry > window treeview.view:selected
+{
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
+}
+
 
 /* Calendars */
 
