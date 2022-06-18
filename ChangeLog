@@ -1,3 +1,17 @@
+Changes from 1.2.0 to 1.2.1
+
+ - Added a few new icon symlinks, to fix more "icon missing" placeholder
+   icons in applications, including the "Go" button in the Caja location
+   bar ('forward'), and the "Open" button in GTK+ file chooser dialogs
+   with gtk3-classic patches ('gtk-open').
+
+ - Fix the transparent action bar in Tilix (thanks to Lewin Probst)
+
+ - Added SHA-256 hashes, a PGP signature, and a deterministic/reproducible
+   distribution tarball to the list of downloads.
+
+-----------------------------------------------------------------------------
+
 Changes from 1.0.0 to 1.2.0
 
  - More icons
