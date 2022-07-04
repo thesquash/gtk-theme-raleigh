@@ -43,6 +43,35 @@ treeview header button:hover
 	padding-top: 5px;
 }
 
+/*
+ * XXX:
+ *
+ * Unfortunately, the way GTK+ 3 draws tree views is severely broken.  Each
+ * cell in the tree view is drawn using the exact "widget path" (position in
+ * the widget hierarchy) as the tree view itself.
+ *
+ * Because of this, there is no way for CSS code to know whether the tree view
+ * itself is unfocused, or if just the cell in question is unfocused.  There's
+ * a difference between the two conditions:  Ideally, if the tree view is
+ * unfocused, all selected cells should be drawn in a shade of gray; if the
+ * tree view is focused, the selected cells should be drawn in the selected
+ * background color.  However, only one row of cells in the tree view can be
+ * focused at one time; so even if the tree view has focus, if multiple rows
+ * are selected, only one row will be colored in the selected background
+ * color.  The rest of the selected rows will be gray, which looks totally
+ * wrong.
+ *
+ * For the time being, unless someone has a solution to this problem, simply
+ * always display selected cells in the selected background color; never gray
+ * out any cells even if the treeview is unfocused.
+ */
+treeview:selected:not(:focus),
+treeview:selected:not(:focus) *
+{
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
+}
+
 
 /*
  * List widgets.
@@ -70,6 +99,14 @@ list > row
 entry
 {
 	padding: 4px;
+}
+
+entry progress
+{
+	background: @bg_color;
+	border-image-width: 1px 2px 2px 1px;
+	border-image-slice: 1 2 2 1;
+	margin: -1px -2px -2px -1px;
 }
 
 /*

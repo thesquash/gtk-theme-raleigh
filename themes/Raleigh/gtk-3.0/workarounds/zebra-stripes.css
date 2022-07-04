@@ -1,0 +1,72 @@
+/*
+ * Some applications that used tree views drew the rows of the tree view in
+ * alternating shades of gray, to help one's eyes track a row of data (in a
+ * potentially very long list) from one column to the next.  This feature was
+ * often called zebra striping.
+ *
+ * GTK+ 3 deprecated zebra striping -- and in fact made it nearly impossible
+ * for themes to zebra stripe, because each cell in the tree view widget is
+ * (stupidly) rendered using the "widget path" of the tree view itself.
+ * Thus, there is no way for a CSS style to know whether it affects an
+ * odd-numbered row or an even-numbered one.  Zebra striping thus cannot
+ * be implemented in GTK+ 3 under normal circumstances.
+ *
+ * However, I contributed a patch to the gtk3-classic project
+ * (https://github.com/lah7/gtk3-classic) that, when applied to GTK, adds
+ * extra style classes to each tree view cell that identify whether the
+ * cell is part of an odd- or even-numbered row, and whether the cell is
+ * part of the column by which the tree view is sorted.  These style classes
+ * can be used to style tree views so that they show zebra stripes.
+ *
+ * Now, why don't we apply these special style rules to all tree views?
+ * Because you don't necessarily need or want zebra stripes in all tree
+ * views.  Short lists with one column don't need zebra stripes.  In days
+ * gone by, GTK+ 2 applications set a property of a tree view to inform the
+ * theme to draw zebra stripes; GTK+ 3 applications usually do not do so.
+ * Thus, we implement a hard-coded list of identifiers of tree views that
+ * either historically would be zebra-striped, or (if somebody requests it)
+ * simply looks better with zebra stripes.
+ *
+ * For the time being, this list is limited to applying zebra stripes to:
+ *
+ * - The GTK+ 3 file chooser (selector:  "filechooser paned > box treeview")
+ * - Caja (the MATE file manager) List View (selector:  ".caja-notebook treeview")
+ * - Thunar (the XFCE file manager) List View (selector:  "window.thunar .standard-view treeview")
+ * - Nemo (the Cinnamon file manager) List View (selector:  ".nemo-window-pane treeview")
+ */
+
+/*
+ * If you beg to differ and believe all tree views should have zebra striping,
+ * uncomment the following code:
+ */
+/*
+treeview.even:not(:selected),
+treeview.sorted.odd:not(:selected)
+{
+	background-color: shade(@color_2, .9);
+}
+treeview.sorted.even:not(:selected)
+{
+	background-color: shade(@color_2, .81);
+}
+*/
+
+filechooser paned > box treeview.even,
+filechooser paned > box treeview.sorted.odd,
+.caja-notebook treeview.even,
+.caja-notebook treeview.sorted.odd,
+window.thunar .standard-view treeview.even,
+window.thunar .standard-view treeview.sorted.odd,
+.nemo-window-pane treeview.even,
+.nemo-window-pane treeview.sorted.odd
+{
+	background-color: shade(@color_2, .9);
+}
+
+filechooser paned > box treeview.sorted.even,
+.caja-notebook treeview.sorted.even,
+window.thunar .standard-view treeview.sorted.even,
+.nemo-window-pane treeview.sorted.even
+{
+	background-color: shade(@color_2, .81);
+}

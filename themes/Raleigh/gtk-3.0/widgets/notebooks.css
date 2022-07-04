@@ -127,3 +127,41 @@ notebook > header.left > tabs > tab:checked
 {
 	margin: -2px -1px -1px 0;
 }
+
+/*
+ * Notebook tab bar arrows (displayed when the list of tabs is longer than the
+ * width of the tab bar)
+ */
+notebook > header.top arrow.up,
+notebook > header.bottom arrow.up
+{
+	-gtk-icon-source: -gtk-icontheme('pan-start-symbolic');
+}
+notebook > header.top arrow.up:dir(rtl),
+notebook > header.bottom arrow.up:dir(rtl)
+{
+	-gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+}
+
+notebook > header.top arrow.down,
+notebook > header.bottom arrow.down
+{
+	-gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+}
+notebook > header.top arrow.down:dir(rtl),
+notebook > header.bottom arrow.down:dir(rtl)
+{
+	-gtk-icon-source: -gtk-icontheme('pan-start-symbolic');
+}
+
+notebook > header.left arrow.up,
+notebook > header.right arrow.up
+{
+	-gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
+}
+
+notebook > header.left arrow.down,
+notebook > header.right arrow.down
+{
+	-gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+}

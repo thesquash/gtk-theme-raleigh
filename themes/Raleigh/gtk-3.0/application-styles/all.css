@@ -12,6 +12,10 @@
 @import url('mate-panel.css');
 
 
+/* XFCE */
+@import url('thunar.css');
+
+
 /*
  * WNCK widgets.
  *

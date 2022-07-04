@@ -39,3 +39,8 @@ wnck-tasklist > button.flat:checked
 	border-image-slice: 2;
 	padding: 2px;
 }*/
+
+.wnck-pager:selected
+{
+	background: @selected_bg_color;
+}

@@ -68,9 +68,13 @@ filechooser > actionbar
  * Add a small space between the folder / bookmark / drive image and the
  * name of the place.
  */
-placessidebar list > row box > image
+placessidebar list > row box > image:dir(ltr)
 {
 	margin-right: 6px;
+}
+placessidebar list > row box > image:dir(rtl)
+{
+	margin-left: 6px;
 }
 
 /*
