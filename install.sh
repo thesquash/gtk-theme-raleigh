@@ -4,8 +4,8 @@
 # by all users on the system).
 #
 # This script was written by Gordon N. Squash for his Gtk-Theme-Raleigh set of
-# themes, but may be used by others under the conditions of the GNU GPL version
-# 3 or (at your option) any later version of the GPL.
+# themes, but may be used by others under the conditions of the GNU LGPL version
+# 3 or (at your option) any later version of the LGPL.
 
 # The themes to install.
 GTK_THEMES="Raleigh Raleigh-Dark"

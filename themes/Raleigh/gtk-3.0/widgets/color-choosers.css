@@ -42,7 +42,7 @@ colorswatch
  */
 colorswatch#add-color-button
 {
-  background-color: @bg_color;
+	background-color: @bg_color;
 	border-image-width: 1px 2px 2px 1px;
 	border-image-slice: 1 2 2 1;
 }
@@ -60,10 +60,12 @@ colorswatch#add-color-button:hover
  * they just selected.
  */
 colorswatch:selected,
-colorswatch:selected > overlay
+colorswatch:selected > overlay,
+colorswatch:selected:not(:focus),
+colorswatch:selected:not(:focus) > overlay
 {
 	background-color: transparent;
-  -gtk-icon-source: -gtk-icontheme('gtk-apply');
+	-gtk-icon-source: -gtk-icontheme('gtk-apply');
 }
 
 colorswatch.dark:selected > overlay

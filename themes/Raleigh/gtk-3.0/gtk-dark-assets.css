@@ -157,18 +157,8 @@ paned.vertical > separator
  *                                   Arrows                                   *
  ******************************************************************************/
 
-
-/*
- * Many of the following statements are for our right-to-left users.
- *
- * Admittedly, we wouldn't need this duplicative code if we used stock symbolic
- * icons, but our custom icons look way better (or at least older-fashioned)
- * than the GTK symbolic icons that we could use.  Well, at least IMHO.
- */
-
 /* From widgets/ranges.css */
 scrollbar.horizontal > contents > button.up,
-scrollbar.horizontal > contents > button.down:dir(rtl),
 /* From widgets/expanders.css */
 expander > title > arrow:dir(rtl)
 {
@@ -178,9 +168,8 @@ expander > title > arrow:dir(rtl)
 
 /* From widgets/ranges.css */
 scrollbar.horizontal > contents > button.down,
-scrollbar.horizontal > contents > button.up:dir(rtl),
 /* From widgets/expanders.css */
-expander > title > arrow
+expander > title > arrow:dir(ltr)
 {
 	background-image: url('../gtk-assets/dark/arrows/arrow-right.png');
 }
@@ -188,7 +177,6 @@ expander > title > arrow
 
 /* From widgets/ranges.css */
 scrollbar.horizontal > contents > button.up:disabled,
-scrollbar.horizontal > contents > button.down:disabled:dir(rtl),
 /* From widgets/expanders.css */
 expander > title > arrow:disabled:dir(rtl)
 {
@@ -198,18 +186,11 @@ expander > title > arrow:disabled:dir(rtl)
 
 /* From widgets/ranges.css */
 scrollbar.horizontal > contents > button.down:disabled,
-scrollbar.horizontal > contents > button.up:disabled:dir(rtl),
 /* From widgets/expanders.css */
-expander > title > arrow:disabled
+expander > title > arrow:disabled:dir(ltr)
 {
 	background-image: url('../gtk-assets/dark/arrows/arrow-right-disabled.png');
 }
-
-
-/*
- * Fortunately, however, vertical scrollbar buttons don't need
- * right-to-left-specific style rules.  So we can relax in this section...
- */
 
 
 /* From widgets/ranges.css */

@@ -29,10 +29,29 @@
  *
  * For the time being, this list is limited to applying zebra stripes to:
  *
- * - The GTK+ 3 file chooser (selector:  "filechooser paned > box treeview")
- * - Caja (the MATE file manager) List View (selector:  ".caja-notebook treeview")
- * - Thunar (the XFCE file manager) List View (selector:  "window.thunar .standard-view treeview")
- * - Nemo (the Cinnamon file manager) List View (selector:  ".nemo-window-pane treeview")
+ * - The GTK+ 3 file chooser
+ *    (selector:  "filechooser paned > box treeview")
+ * - Caja (the MATE file manager) List View
+ *    (selector:  ".caja-notebook treeview")
+ * - Thunar (the XFCE file manager) List View
+ *    (selector:  "window.thunar .standard-view treeview")
+ * - Nemo (the Cinnamon file manager) List View
+ *    (selector:  ".nemo-window-pane treeview")
+ *
+ * FIXME:  In the future, I should write a new gtk3-classic patch that adds
+ *         yet another style class to each cell -- one that identifies whether
+ *         the cell's parent tree view displays column heading buttons.  While
+ *         looking back through some old GTK+ 2 applications, I noticed that
+ *         almost all the tree views that displayed column headings also were
+ *         zebra striped.  This correlation makes sense because, generally
+ *         speaking, zebra stripes are most useful on tree views with a lot
+ *         of columns per row; the stripes guide your eye from one column to
+ *         another, without your eye jumping to a different row accidentally.
+ *         And, column headings usually aren't deployed unless the tree view
+ *         has (or could potentially have) a lot of columns; for tree views
+ *         with one column, why bother?  So if there were a style class that
+ *         indicated if the tree view had column headings, then the presence
+ *         of that style class could be used to enable zebra stripes.
  */
 
 /*
@@ -51,22 +70,30 @@ treeview.sorted.even:not(:selected)
 }
 */
 
-filechooser paned > box treeview.even,
-filechooser paned > box treeview.sorted.odd,
-.caja-notebook treeview.even,
-.caja-notebook treeview.sorted.odd,
-window.thunar .standard-view treeview.even,
-window.thunar .standard-view treeview.sorted.odd,
-.nemo-window-pane treeview.even,
-.nemo-window-pane treeview.sorted.odd
+/* GtkFileChooser */
+filechooser paned > box treeview.even:not(:selected),
+filechooser paned > box treeview.sorted.odd:not(:selected),
+/* Caja */
+.caja-notebook treeview.even:not(:selected),
+.caja-notebook treeview.sorted.odd:not(:selected),
+/* Thunar */
+window.thunar .standard-view treeview.even:not(:selected),
+window.thunar .standard-view treeview.sorted.odd:not(:selected),
+/* Nemo */
+.nemo-window-pane treeview.even:not(:selected),
+.nemo-window-pane treeview.sorted.odd:not(:selected)
 {
 	background-color: shade(@color_2, .9);
 }
 
-filechooser paned > box treeview.sorted.even,
-.caja-notebook treeview.sorted.even,
-window.thunar .standard-view treeview.sorted.even,
-.nemo-window-pane treeview.sorted.even
+/* GtkFileChooser */
+filechooser paned > box treeview.sorted.even:not(:selected),
+/* Caja */
+.caja-notebook treeview.sorted.even:not(:selected),
+/* Thunar */
+window.thunar .standard-view treeview.sorted.even:not(:selected),
+/* Nemo */
+.nemo-window-pane treeview.sorted.even:not(:selected)
 {
 	background-color: shade(@color_2, .81);
 }
