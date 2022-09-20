@@ -7,6 +7,9 @@
 # themes, but may be used by others under the conditions of the GNU LGPL version
 # 3 or (at your option) any later version of the LGPL.
 
+# The command for copying files.
+CP='cp -dR --preserve=timestamps,links'
+
 # The themes to install.
 GTK_THEMES="Raleigh Raleigh-Dark"
 ICON_THEMES="Raleigh Raleigh-Dark"
@@ -29,13 +32,13 @@ HAVE_GTK_UPDATE_ICON_CACHE=$(gtk-update-icon-cache --help 2>/dev/null && echo 1)
 mkdir -p "${PREFIX}/share/themes"
 for GTK_THEME in $GTK_THEMES; do
 	echo "Installing GTK+ theme \"${GTK_THEME}\"..."
-	cp -a "themes/${GTK_THEME}" "${PREFIX}/share/themes" || fail
+	${CP} "themes/${GTK_THEME}" "${PREFIX}/share/themes" || fail
 done
 
 mkdir -p "${PREFIX}/share/icons"
 for ICON_THEME in $ICON_THEMES; do
 	echo "Installing icon theme \"${ICON_THEME}\"..."
-	cp -a "icons/${ICON_THEME}" "${PREFIX}/share/icons" || fail
+	${CP} "icons/${ICON_THEME}" "${PREFIX}/share/icons" || fail
 
 	if [ -n "$HAVE_GTK_UPDATE_ICON_CACHE" ]; then
 		echo "Creating icon cache for icon theme \"${ICON_THEME}\"..."
