@@ -1,11 +1,11 @@
 [Icon Theme]
 Name=Raleigh
 Comment=A redo of the GNOME icon theme as it stood until 2006
-Directories=generic/16,generic/20,generic/24,generic/32,generic/48,gnome/16,gnome/24,gnome/48,mate/16,mate/20,mate/24,mate/32,mate/48,other/16,other/20,other/24,other/32,other/48
+Directories=generic/16,generic/20,generic/24,generic/32,generic/48,gnome/16,gnome/24,gnome/48,mate/16,mate/24,mate/48,xfce/16,xfce/24,xfce/48,other/16,other/24,other/48
 
 
 # Generic icons not specific to any desktop environment or application in
-# particular
+# particular (this includes "stock" GTK and FreeDesktop icons)
 
 [generic/16]
 Size=16
@@ -34,16 +34,8 @@ Type=Fixed
 Size=16
 Type=Fixed
 
-[gnome/20]
-Size=20
-Type=Fixed
-
 [gnome/24]
 Size=24
-Type=Fixed
-
-[gnome/32]
-Size=32
 Type=Fixed
 
 [gnome/48]
@@ -57,16 +49,8 @@ Type=Fixed
 Size=16
 Type=Fixed
 
-[mate/20]
-Size=20
-Type=Fixed
-
 [mate/24]
 Size=24
-Type=Fixed
-
-[mate/32]
-Size=32
 Type=Fixed
 
 [mate/48]
@@ -74,22 +58,30 @@ Size=48
 Type=Fixed
 
 
-# Icons specific to applications not specifically part of a desktop environment
+# Icons specific to XFCE and XFCE applications
+
+[xfce/16]
+Size=16
+Type=Fixed
+
+[xfce/24]
+Size=24
+Type=Fixed
+
+[xfce/48]
+Size=48
+Type=Fixed
+
+
+# Icons specific to applications not part of any desktop environment
+# (for example: LibreOffice, Geany, Audacity, ...)
 
 [other/16]
 Size=16
 Type=Fixed
 
-[other/20]
-Size=20
-Type=Fixed
-
 [other/24]
 Size=24
-Type=Fixed
-
-[other/32]
-Size=32
 Type=Fixed
 
 [other/48]

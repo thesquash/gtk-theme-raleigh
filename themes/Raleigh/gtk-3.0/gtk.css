@@ -1,6 +1,6 @@
 @define-color light_base_color                              #ffffff;
 @define-color base_color                                    #dcdad5;
-@define-color dark_base_color                               #777777;
+@define-color dark_base_color                               #8c8982;
 @define-color darkest_base_color                            #000000;
 
 @define-color bg_color                                      @base_color;
@@ -19,14 +19,14 @@
 @define-color link_color                                    #0000ee;
 @define-color visited_link_color                            #551a8b;
 
-@define-color color_1                                       #777777;
+@define-color color_1                                       #8c8982;
 @define-color color_2                                       @light_base_color;
-@define-color color_3                                       #cccccc;
+@define-color color_3                                       #c4c2bd;
 
-@define-color insensitive_fg_color                          #777777;
+@define-color insensitive_fg_color                          #8c8982;
 @define-color insensitive_text_shadow_color                 #ffffff;
 
-@define-color hover_bg_color                                #eeeeee;
+@define-color hover_bg_color                                #eeebe7;
 
 @define-color colored_border_fg_color                       #000000;
 @define-color colored_border_insensitive_text_shadow_color  #ffffff;
