@@ -23,6 +23,16 @@ selection,
 	color: @selected_fg_color;
 }
 
+/*
+ * This was supposed to show unfocused but selected stuff in gray instead of
+ * the normal "selected" color of blue.  Unfortunately, most applications that
+ * draw custom GTK+ widgets don't bother to tell GTK+ when the widget is
+ * focused, so selected stuff always ends up gray.
+ *
+ * This is a failed experiment.  I'm thus disabling it now.  If you want it
+ * back for yourself, uncomment the following block.
+ */
+/*
 selection:not(:focus),
 .selection:not(:focus),
 :selected:not(:focus),
@@ -32,6 +42,7 @@ selection:not(:focus),
 	background-color: @selected_unfocused_bg_color;
 	color: @selected_unfocused_fg_color;
 }
+*/
 
 :focus
 {

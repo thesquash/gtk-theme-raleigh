@@ -18,8 +18,12 @@ MatePanelAppletFrameDBus > MatePanelAppletFrameDBus
 {
 	border-image-width: 1px 0 2px 0;
 	border-image-slice: 1 2 2 1;
-	background-repeat: repeat-y;
 	background-position: top left;
+}
+
+PanelToplevel MatePanelAppletFrameDBus > MatePanelAppletFrameDBus
+{
+	background-repeat: repeat-y;
 	background-size: 10px 3px;
 }
 

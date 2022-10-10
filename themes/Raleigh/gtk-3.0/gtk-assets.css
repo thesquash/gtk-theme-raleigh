@@ -10,8 +10,10 @@
 
 /* From widgets/buttons.css */
 button,
+.button,
 button.flat:hover,
 button.link:hover,
+spinbutton:not(.entry),
 /* From widgets/color-choosers.css */
 colorswatch#add-color-button,
 /* From widgets/lists-and-views.css */
@@ -25,7 +27,9 @@ toolbar,
 .emoji-picker stack scrolledwindow + box,
 /* From widgets/notebooks.css */
 notebook > stack:not(:only-child),
+window > widget > notebook.frame,
 notebook > header > tabs > tab,
+notebook > .frame,
 /* From widgets/ranges.css */
 scrollbar > contents > trough > slider,
 scale > contents > trough > slider,
@@ -42,11 +46,13 @@ MatePanelAppletFrameDBus > MatePanelAppletFrameDBus
 
 /* From widgets/buttons.css */
 button:active,
+.button:active,
 button:checked,
 button.flat:active,
 button.flat:checked,
 button.link:active,
 button.link:checked,
+spinbutton:not(.entry):active,
 switch,
 /* From widgets/color-choosers.css */
 colorswatch,
@@ -91,6 +97,7 @@ frame > border
 
 /* From widgets/lists-and-views.css */
 entry,
+.entry,
 textview,
 :not(stack) > list,
 /* From application-styles/caja.css */
@@ -159,6 +166,7 @@ paned.vertical > separator
 
 /* From widgets/ranges.css */
 scrollbar.horizontal > contents > button.up,
+scrollbar.horizontal .button.left,
 /* From widgets/expanders.css */
 expander > title > arrow:dir(rtl)
 {
@@ -168,6 +176,7 @@ expander > title > arrow:dir(rtl)
 
 /* From widgets/ranges.css */
 scrollbar.horizontal > contents > button.down,
+scrollbar.horizontal .button.right,
 /* From widgets/expanders.css */
 expander > title > arrow:dir(ltr)
 {
@@ -177,6 +186,7 @@ expander > title > arrow:dir(ltr)
 
 /* From widgets/ranges.css */
 scrollbar.horizontal > contents > button.up:disabled,
+scrollbar.horizontal .button.left:disabled,
 /* From widgets/expanders.css */
 expander > title > arrow:disabled:dir(rtl)
 {
@@ -186,6 +196,7 @@ expander > title > arrow:disabled:dir(rtl)
 
 /* From widgets/ranges.css */
 scrollbar.horizontal > contents > button.down:disabled,
+scrollbar.horizontal .button.right:disabled,
 /* From widgets/expanders.css */
 expander > title > arrow:disabled:dir(ltr)
 {
@@ -194,7 +205,8 @@ expander > title > arrow:disabled:dir(ltr)
 
 
 /* From widgets/ranges.css */
-scrollbar.vertical > contents > button.up
+scrollbar.vertical > contents > button.up,
+scrollbar.vertical .button.top
 {
 	background-image: url('../gtk-assets/light/arrows/arrow-up.png');
 }
@@ -202,6 +214,7 @@ scrollbar.vertical > contents > button.up
 
 /* From widgets/ranges.css */
 scrollbar.vertical > contents > button.down,
+scrollbar.vertical .button.bottom,
 /* From widgets/expanders.css */
 expander > title > arrow:checked
 {
@@ -210,7 +223,8 @@ expander > title > arrow:checked
 
 
 /* From widgets/ranges.css */
-scrollbar.vertical > contents > button.up:disabled
+scrollbar.vertical > contents > button.up:disabled,
+scrollbar.vertical .button.top:disabled
 {
 	background-image: url('../gtk-assets/light/arrows/arrow-up-disabled.png');
 }
@@ -218,6 +232,7 @@ scrollbar.vertical > contents > button.up:disabled
 
 /* From widgets/ranges.css */
 scrollbar.vertical > contents > button.down:disabled,
+scrollbar.vertical .button.bottom:disabled,
 /* From widgets/expanders.css */
 expander > title > arrow:disabled:checked
 {
@@ -291,7 +306,7 @@ menuitem:hover > radio:checked
  ******************************************************************************/
 
 /* From application-styles/mate-panel.css */
-MatePanelAppletFrameDBus > MatePanelAppletFrameDBus
+PanelToplevel MatePanelAppletFrameDBus > MatePanelAppletFrameDBus
 {
 	background-image: url("../gtk-assets/light/miscellaneous/panel-item-grip.png");
 }

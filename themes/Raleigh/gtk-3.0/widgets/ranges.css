@@ -108,7 +108,8 @@ scale.vertical > marks > mark > indicator
  *   below (NOW MOVED TO gtk-assets.css), where we apply custom arrow images
  *   to each scrollbar button.
  */
-scrollbar > contents > button
+scrollbar > contents > button,
+scrollbar .button
 {
 	-gtk-icon-source: none;
 	background-position: center;

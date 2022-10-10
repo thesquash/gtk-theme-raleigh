@@ -11,7 +11,8 @@ treeview,
 iconview,
 list,
 textview,
-entry
+entry,
+.entry
 {
 	background-color: @color_2;
 }
@@ -21,12 +22,14 @@ treeview:disabled,
 iconview:disabled,
 list:disabled,
 textview:disabled,
-entry:disabled
+entry:disabled,
+.entry:disabled
 {
 	background-color: @hover_bg_color;
 }
 
 entry,
+.entry,
 textview,
 :not(stack) > list
 {
@@ -96,7 +99,8 @@ list > row
 
 /* Entry widgets */
 
-entry
+entry,
+.entry
 {
 	padding: 4px;
 }

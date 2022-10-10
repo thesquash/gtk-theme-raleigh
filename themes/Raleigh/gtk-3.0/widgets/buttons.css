@@ -5,15 +5,24 @@
 
 /* Buttons */
 
-button
+button,
+.button,
+spinbutton:not(.entry) /* Pre-GTK-3.20 spinbutton stepper buttons; still used by Firefox */
 {
 	background-color: @bg_color;
+}
+
+button,
+.button
+{
 	padding: 6px;
 }
 
 button,
+.button,
 button.flat:hover,
-button.link:hover
+button.link:hover,
+spinbutton:not(.entry)
 {
 	border-image-width: 1px 2px 2px 1px;
 	border-image-slice: 1 2 2 1;
@@ -43,17 +52,21 @@ button.link
 	background-color: transparent;
 }
 
-button:hover
+button:hover,
+.button:hover,
+spinbutton:not(.entry):hover
 {
 	background-color: @hover_bg_color;
 }
 
 button:active,
+.button:active,
 button:checked,
 button.flat:active,
 button.flat:checked,
 button.link:active,
-button.link:checked
+button.link:checked,
+spinbutton:not(.entry):active
 {
 	border-image-width: 2px 1px 1px 2px;
 	border-image-slice: 2 1 1 2;

@@ -33,12 +33,16 @@ mkdir -p "${PREFIX}/share/themes"
 for GTK_THEME in $GTK_THEMES; do
 	echo "Installing GTK+ theme \"${GTK_THEME}\"..."
 	${CP} "themes/${GTK_THEME}" "${PREFIX}/share/themes" || fail
+	chown -R 0:0 "${PREFIX}/share/themes/${GTK_THEME}"
+	chmod -R u=rwX,go=rX "${PREFIX}/share/themes/${GTK_THEME}"
 done
 
 mkdir -p "${PREFIX}/share/icons"
 for ICON_THEME in $ICON_THEMES; do
 	echo "Installing icon theme \"${ICON_THEME}\"..."
 	${CP} "icons/${ICON_THEME}" "${PREFIX}/share/icons" || fail
+	chown -R 0:0 "${PREFIX}/share/themes/${ICON_THEME}"
+	chmod -R u=rwX,go=rX "${PREFIX}/share/themes/${ICON_THEME}"
 
 	if [ -n "$HAVE_GTK_UPDATE_ICON_CACHE" ]; then
 		echo "Creating icon cache for icon theme \"${ICON_THEME}\"..."

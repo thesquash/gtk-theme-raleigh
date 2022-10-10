@@ -13,7 +13,9 @@
  * Add a nice frame around the content of the notebook,
  * but only when the notebook shows a tab bar.
  */
-notebook > stack:not(:only-child)
+notebook > stack:not(:only-child),
+/* For Mozilla applications -- they just can't follow the rules! */
+window > widget > notebook.frame
 {
 	border-image-width: 2px;
 	border-image-slice: 2;
@@ -23,14 +25,16 @@ notebook > stack:not(:only-child)
 
 /* Notebook tabs */
 
-notebook > header > tabs > tab
+notebook > header > tabs > tab,
+notebook > .frame
 {
 	border-image-width: 1px 2px 2px 1px;
 	border-image-slice: 1 2 2 1;
 	background-color: @color_3;
 }
 
-notebook > header > tabs > tab:checked
+notebook > header > tabs > tab:checked,
+notebook > .frame:active
 {
 	background-color: @bg_color;
 }
@@ -40,7 +44,8 @@ notebook > header > tabs > tab:checked
  * tabs; it is applied to the notebook itself, and the focus rectangle should
  * instead be drawn around whichever tab is currently active.
  */
-notebook:focus > header > tabs > tab:checked
+notebook:focus > header > tabs > tab:checked,
+notebook > .frame:active
 {
 	outline-color: @fg_color;
 	outline-offset: -4px;
@@ -60,7 +65,8 @@ notebook > header.right > tabs > tab
 	padding: 6px 4px;
 }
 
-notebook > header.top > tabs > tab
+notebook > header.top > tabs > tab,
+notebook > .frame.top
 {
 	border-image-width: 1px 2px 0 1px;
 	margin-top: 2px;
@@ -108,7 +114,8 @@ notebook > header.right > tabs > arrow + tab:checked:last-child
 	margin-bottom: 0px;
 }
 
-notebook > header.bottom > tabs > tab
+notebook > header.bottom > tabs > tab,
+notebook > .frame.bottom
 {
 	border-image-width: 0 2px 2px 1px;
 	margin-bottom: 2px;
