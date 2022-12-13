@@ -2,3 +2,11 @@ window.thunar widget.view
 {
 	background-color: @color_2;
 }
+
+window.thunar widget.view.rubberband
+{
+	background-color: alpha (@selected_bg_color, 0.3);
+	border-color: @fg_color;
+	border-style: solid;
+	border-width: 1px;
+}
