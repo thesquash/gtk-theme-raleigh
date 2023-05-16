@@ -46,6 +46,11 @@ treeview header button:hover
 	padding-top: 5px;
 }
 
+treeview.separator
+{
+	min-height: 3px;
+}
+
 /*
  * XXX:
  *
