@@ -24,17 +24,18 @@ tooltip > decoration
  * Title bars and window titles.
  */
 
-.titlebar
+.titlebar:not(headerbar), headerbar
 {
 	background-color: @selected_bg_color;
 	border-image-source: url('../../gtk-assets/common/borders/progress-border.png');
 	border-image-width: 1px 2px 2px 1px;
 	border-image-slice: 1 2 2 1;
 	margin: -2px -2px 0 -2px;
-	padding: 6px;
+	padding: 2px 6px;
+	min-height: 24px;
 }
 
-.titlebar:backdrop
+.titlebar:backdrop:not(headerbar), headerbar:backdrop
 {
 	background-color: @bg_color;
 	border-image-source: url('.themes/Raleigh-Dark/gtk-assets/dark/borders/border.png');
