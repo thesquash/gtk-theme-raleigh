@@ -1,4 +1,42 @@
-# A Notice About Zebra Stripes, What They Are, and How to Get Them
+## TL;DR:
+
+If you would like your applications to draw lists like this:
+
+<img src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/screenshots/GTK-2-Zebra-Stripes.png"/>
+
+...then follow these steps:
+
+ 0. If you want **ALL** lists in **ALL** GTK+ 3 applications to be drawn
+    as shown in the picture above (as opposed to just a select few
+    applications, mostly file manager programs, which I think deserve the
+    alternating colors):  In your favorite text editor, open the file in
+    this theme package at
+    `themes/Raleigh/gtk-3.0/workarounds/zebra-stripes.css`.  Look for a
+    block that starts with:
+    ```
+    /*
+     * If you beg to differ and believe all tree views should have zebra striping,
+     * uncomment the following code:
+     */
+    ```
+    A block of code starting with `/*` and ending with `*/` (each of these
+    two markers will be on its own line) will immediately follow that note.
+    Remove both aforementioned markers (`/*` and `*/`) surrounding the code
+    (but do not remove the markers surrounding the note!).  Save the file.
+ 1. Install this theme package.
+ 2. Look for a package called `gtk3-classic` in your distribution, then
+    install it.  (If for some reason your distribution doesn't have this
+    package available, you can get it straight from the author at
+    [https://github.com/lah7/gtk3-classic].
+ 3. Log out of your current desktop session, then log back in.  (This
+    step is necessary; the `gtk3-classic` package will have replaced the
+    regular GTK+ 3 libraries installed on your system, and all GTK+ 3
+    applications will need to be restarted before the changes take
+    effect.)
+
+---
+
+## A Notice About Zebra Stripes, What They Are, and How to Get Them
 
 In GTK+ 2, many themes (certainly Raleigh) drew the rows of tree views and
 other lists in alternating background colors, when instructed to by the
@@ -14,7 +52,7 @@ of a GTK+ 2 application with the original Raleigh theme:
 Notice how odd-numbered rows are colored slightly differently from
 even-numbered rows.
 
-## The Problem
+### The Problem
 
 Unfortunately, tree views and lists are not drawn in GTK+ 3 the same way as
 they were drawn in GTK+ 2 -- the mechanism changed, and (in my opinion) the
@@ -37,7 +75,7 @@ zebra stripes really appropriate to have here?
 
 <img src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/screenshots/Caja-Sidebar-with-Zebra-Stripes.png"/>
 
-## The Solution
+### The Solution
 
 Fortunately, there is a solution to this problem.  Some months ago, I
 contributed a GTK patch to the [`gtk3-classic`](https://github.com/lah7/gtk3-classic)
@@ -67,7 +105,7 @@ Gtk-Theme-Raleigh only themes the tree views of select file managers --
 currently, the GTK+ file chooser dialog, Caja (MATE), Nemo (Cinnamon), and
 Thunar (XFCE).  All other tree views lack zebra stripes.
 
-## In the Future
+### In the Future
 
 I plan to submit a revision of my original patch to `gtk3-classic`, that marks
 list cells with yet another style class.  If this style class is present, it
@@ -85,7 +123,7 @@ row from one column to another.  Heck, if the list has only one column (like
 the Caja side pane as shown above), you don't even *need* to look at a second
 column -- you can't!
 
-## In Summary
+### In Summary
 
 Zebra striping, believe it or not, is controversial.  Some people couldn't
 care less about them.  Others believe zebra stripes are essential.

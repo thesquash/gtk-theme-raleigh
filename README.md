@@ -5,8 +5,8 @@
 if you would like the most authentic experience possible with this theme!
 
 ## MATE (1.26.0):
-<img alt="MATE 1.26.0 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/screenshots/Raleigh-MATE-1-26.png"/>
-<img alt="MATE 1.26.0 desktop with Gtk-Theme-Raleigh Dark theme" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/screenshots/Raleigh-Dark-MATE-1-26.png"/>
+<img alt="MATE 1.26.2 desktop with Gtk-Theme-Raleigh" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/screenshots/Raleigh-MATE-1-26.png"/>
+<img alt="MATE 1.26.2 desktop with Gtk-Theme-Raleigh Dark theme" src="https://raw.githubusercontent.com/thesquash/gtk-theme-raleigh/master/screenshots/Raleigh-Dark-MATE-1-26.png"/>
 
 ## XFCE:  (screenshots in progress)
 
