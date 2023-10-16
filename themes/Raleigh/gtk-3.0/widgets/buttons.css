@@ -168,3 +168,14 @@ switch > slider
 	border-image-width: 1px 2px 2px 1px;
 	border-image-slice: 1 2 2 1;
 }
+
+/* Make titlebar/headerbar small */
+button.titlebutton, headerbar.default-decoration button.titlebutton, button.titlebutton:not(.appmenu) {
+  min-height: 18px;
+  min-width: 18px;
+  padding: 1px;
+}
+
+button.titlebutton, .default-decoration.titlebar:not(headerbar) button.titlebutton, .incognito-mode headerbar button.titlebutton, .incognito-mode actionbar button.titlebutton { 
+  padding: 1px;
+}
